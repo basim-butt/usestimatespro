@@ -29,13 +29,6 @@ export default function Footer() {
               We supply General Contractors, Developers, and Subcontractors with verifiable,
               CSI-compliant quantity takeoffs and regional cost models across all 50 states.
             </p>
-
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              <span className="footer-badge-tag">🇺🇸 ASPE Guidelines</span>
-              <span className="footer-badge-tag">📊 RSMeans Local Rates</span>
-              <span className="footer-badge-tag">⚡ 24–48h Bid Delivery</span>
-              <span className="footer-badge-tag">🔒 100% Confidential</span>
-            </div>
           </div>
 
           {/* Quick Navigation */}
