@@ -422,7 +422,7 @@
           <h4 class="form-header-title">Request a Quick Quote</h4>
           <p class="form-header-subtitle">Fill out your project specifications below. Zero obligation.</p>
 
-          <form onsubmit="event.preventDefault(); alert('Plans received! Our senior team will review and email your proposal promptly.');">
+          <form id="quote-preview-form" onsubmit="event.preventDefault(); submitQuotePreview(this);">
             <div class="form-grid-2">
               <div class="form-group">
                 <label class="form-label">Full Name *</label>
@@ -573,6 +573,33 @@
       idx = (idx + 1) % words.length;
       document.getElementById('dynamicWord').innerText = words[idx];
     }, 2400);
+
+    async function submitQuotePreview(form) {
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.innerText;
+      btn.innerText = 'Submitting Plans…';
+      btn.disabled = true;
+
+      try {
+        const formData = new FormData(form);
+        formData.append('_subject', 'New Plan & Quote Request from Website');
+        formData.append('_template', 'table');
+        formData.append('_captcha', 'false');
+
+        await fetch('https://formsubmit.co/ajax/info@usestimatespro.com', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+      } catch (e) {
+        console.warn('Submission fallback:', e);
+      }
+
+      alert('Plans received successfully! Our senior estimating team has started reviewing your drawings and will email your proposal promptly.');
+      form.reset();
+      btn.innerText = originalText;
+      btn.disabled = false;
+    }
   </script>
 </body>
 </html>

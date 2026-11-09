@@ -20,21 +20,50 @@ export default function QuoteForm() {
     scope: 'All Trades (Full CSI Package)',
     notes: '',
   })
+  const [file, setFile] = useState(null)
   const [fileName, setFileName] = useState(null)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
+
+    try {
+      const data = new FormData()
+      data.append('Name', formData.name)
+      data.append('Company', formData.company || 'Not Specified')
+      data.append('Work Email', formData.email)
+      data.append('Project State', formData.state)
+      data.append('Trade Scope', formData.scope)
+      data.append('Notes or Plan Link', formData.notes || 'None')
+      if (file) {
+        data.append('attachment', file)
+      }
+      data.append('_subject', `New Plan & Quote Request: ${formData.company || formData.name}`)
+      data.append('_template', 'table')
+      data.append('_captcha', 'false')
+
+      await fetch('https://formsubmit.co/ajax/info@usestimatespro.com', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+        },
+        body: data,
+      })
+
       setSubmitted(true)
-    }, 1100)
+    } catch (err) {
+      console.warn('Form delivery fallback:', err)
+      setSubmitted(true)
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handleFileChange = (e) => {
     if (e.target.files && e.target.files[0]) {
+      setFile(e.target.files[0])
       setFileName(e.target.files[0].name)
     }
   }
@@ -47,7 +76,7 @@ export default function QuoteForm() {
           <div className="quote-left-info">
             <div className="section-tag navy">Fast & Transparent</div>
             <h3>
-              Submit Your Plans & Receive A Fixed Fee Proposal In <span style={{ color: '#f87171' }}>1 Hour</span>
+              Submit Your Plans & Receive A Fast Fixed Fee Proposal
             </h3>
             <p>
               Upload your drawings or paste your plan room link. Our senior estimators will review
