@@ -1,11 +1,11 @@
 import React from 'react'
-import { AmericanFlagIcon } from './Navbar'
+import { BrandLogo } from './Navbar'
 
 export default function Footer() {
   const scrollTo = (id) => {
     const el = document.getElementById(id)
     if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 80
+      const top = el.getBoundingClientRect().top + window.scrollY - 85
       window.scrollTo({ top, behavior: 'smooth' })
     }
   }
@@ -16,98 +16,91 @@ export default function Footer() {
         <div className="footer-top-grid">
           {/* Brand Info */}
           <div className="footer-brand-col">
-            <div className="logo-container" onClick={() => scrollTo('hero')}>
-              <AmericanFlagIcon />
-              <div className="logo-text-group">
-                <div className="logo-brand-name">
-                  US-ESTIMATES<span>PRO</span>
-                </div>
-                <div className="logo-tagline" style={{ color: '#94a3b8' }}>
-                  Cost Estimation & Takeoffs
-                </div>
-              </div>
+            <div
+              className="logo-clickable"
+              onClick={() => scrollTo('hero')}
+              style={{ cursor: 'pointer', display: 'inline-block' }}
+            >
+              <BrandLogo />
             </div>
 
             <p className="footer-about-text">
-              US Estimates Pro is an American outsourced construction cost estimating and material
-              takeoff partner for General Contractors, Subcontractors, and Developers. Operating across
-              all 50 US states with human senior estimators and RSMeans certified cost data.
+              US Estimates Pro is an independent American construction estimating consultancy.
+              We supply General Contractors, Developers, and Subcontractors with verifiable,
+              CSI-compliant quantity takeoffs and regional cost models across all 50 states.
             </p>
 
-            <div style={{ display: 'flex', gap: '10px' }}>
-              <span style={{ background: 'rgba(255,255,255,0.08)', padding: '6px 12px', borderRadius: '4px', fontSize: '0.78rem', color: '#e2e8f0', fontWeight: 600 }}>
-                🇺🇸 ASPE Standards
-              </span>
-              <span style={{ background: 'rgba(255,255,255,0.08)', padding: '6px 12px', borderRadius: '4px', fontSize: '0.78rem', color: '#e2e8f0', fontWeight: 600 }}>
-                📊 RSMeans Data
-              </span>
-              <span style={{ background: 'rgba(255,255,255,0.08)', padding: '6px 12px', borderRadius: '4px', fontSize: '0.78rem', color: '#e2e8f0', fontWeight: 600 }}>
-                ⚡ 24-48h Delivery
-              </span>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+              <span className="footer-badge-tag">🇺🇸 ASPE Guidelines</span>
+              <span className="footer-badge-tag">📊 RSMeans Local Rates</span>
+              <span className="footer-badge-tag">⚡ 24–48h Bid Delivery</span>
+              <span className="footer-badge-tag">🔒 Strict NDA Protection</span>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Navigation */}
           <div>
-            <h4 className="footer-col-title">Navigation</h4>
+            <h4 className="footer-col-title">Explore</h4>
             <ul className="footer-links-list">
-              <li><a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo('hero') }}>Home</a></li>
-              <li><a href="#why-us" onClick={(e) => { e.preventDefault(); scrollTo('why-us') }}>About Our Estimators</a></li>
+              <li><a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo('hero') }}>Overview</a></li>
+              <li><a href="#why-us" onClick={(e) => { e.preventDefault(); scrollTo('why-us') }}>Why Choose Us</a></li>
               <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }}>Estimating Services</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>CSI Trade Divisions</a></li>
-              <li><a href="#process" onClick={(e) => { e.preventDefault(); scrollTo('process') }}>Our 3-Step Process</a></li>
-              <li><a href="#quote" onClick={(e) => { e.preventDefault(); scrollTo('quote') }}>Request Free Quote</a></li>
+              <li><a href="#quick-estimator" onClick={(e) => { e.preventDefault(); scrollTo('quick-estimator') }}>Takeoff Calculator</a></li>
+              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Trades Covered</a></li>
+              <li><a href="#process" onClick={(e) => { e.preventDefault(); scrollTo('process') }}>Our Workflow</a></li>
+              <li><a href="#quote" onClick={(e) => { e.preventDefault(); scrollTo('quote') }}>Submit Plans</a></li>
             </ul>
           </div>
 
-          {/* Trades Covered */}
+          {/* Core CSI Divisions */}
           <div>
-            <h4 className="footer-col-title">Core Divisions</h4>
+            <h4 className="footer-col-title">Trade Scopes</h4>
             <ul className="footer-links-list">
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 03 — Concrete</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 04 — Masonry</a></li>
+              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 03 — Concrete & Slabs</a></li>
+              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 04 — Masonry & Stone</a></li>
               <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 05 — Structural Steel</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 06 — Wood Framing</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 09 — Drywall & Paint</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 21-28 — Full MEP</a></li>
+              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 06 — Framing & Timber</a></li>
+              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 09 — Drywall & Finishes</a></li>
+              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Divisions 21–28 — Full MEP Packages</a></li>
+              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Divisions 31–33 — Site & Civil Works</a></li>
             </ul>
           </div>
 
           {/* Contact Details */}
           <div>
-            <h4 className="footer-col-title">Contact & Offices</h4>
+            <h4 className="footer-col-title">Direct Offices</h4>
             <div className="footer-contact-row">
               <span className="icon">📍</span>
               <div>
-                <strong>Headquarters:</strong><br />
-                Wall Street Financial District<br />
-                New York, NY 10005
+                <strong>National Headquarters:</strong><br />
+                Financial District, New York, NY 10005<br />
+                <span style={{ color: '#94a3b8', fontSize: '0.82rem' }}>Operations Hub: Austin, TX</span>
               </div>
             </div>
             <div className="footer-contact-row">
               <span className="icon">📞</span>
               <div>
-                <strong>Toll-Free Phone:</strong><br />
-                <a href="tel:+18005550199" style={{ color: '#f87171', fontWeight: 700 }}>
-                  +1 (800) 555-0199
+                <strong>Direct Estimating Line:</strong><br />
+                <a href="tel:+18005550199" style={{ color: '#f87171', fontWeight: 700, fontSize: '1rem' }}>
+                  (800) 555-0199
                 </a>
               </div>
             </div>
             <div className="footer-contact-row">
               <span className="icon">✉️</span>
               <div>
-                <strong>Email:</strong><br />
-                <a href="mailto:info@usestimatespro.com" style={{ color: '#e2e8f0' }}>
-                  info@usestimatespro.com
+                <strong>Plan Submission Email:</strong><br />
+                <a href="mailto:bids@usestimatespro.com" style={{ color: '#e2e8f0' }}>
+                  bids@usestimatespro.com
                 </a>
               </div>
             </div>
             <div className="footer-contact-row">
               <span className="icon">🕒</span>
               <div>
-                <strong>Working Hours:</strong><br />
-                Monday – Friday: 7:00 AM – 7:00 PM EST<br />
-                Saturday: Emergency Bid Coverage Available
+                <strong>Hours:</strong><br />
+                Mon–Sat: 6:30 AM – 8:00 PM EST<br />
+                Emergency Weekend Bid Support On Demand
               </div>
             </div>
           </div>
@@ -117,13 +110,13 @@ export default function Footer() {
         <div className="footer-bottom-bar">
           <div className="footer-bottom-inner">
             <div>
-              © {new Date().getFullYear()} <strong>US Estimates Pro</strong> (usestimatespro.com). All rights reserved.
+              © {new Date().getFullYear()} <strong>US Estimates Pro</strong>. All rights reserved.
             </div>
-            <div style={{ display: 'flex', gap: '20px' }}>
+            <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
               <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
+              <a href="#">Terms & Bid Standards</a>
               <a href="#">Non-Disclosure Agreement (NDA)</a>
-              <a href="#">Sitemap</a>
+              <a href="#">Client Portal</a>
             </div>
           </div>
         </div>

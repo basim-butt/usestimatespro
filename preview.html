@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>US Estimates Pro | Construction Cost Estimation & Quantity Takeoffs</title>
+  <title>US Estimates Pro | Precision Construction Takeoffs & Bid Consulting</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230b1a30'/><rect y='66' width='100' height='34' rx='4' fill='%23dc2626'/><text y='58' x='50' text-anchor='middle' font-size='44' font-family='sans-serif' font-weight='900' fill='white'>US</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./src/index.css" />
   <style>
-    /* Standalone Preview Styling */
     html { scroll-behavior: smooth; }
   </style>
 </head>
@@ -21,16 +20,23 @@
     <div class="container">
       <div class="topbar-inner">
         <div class="topbar-left">
-          <span class="topbar-item"><span style="color:#f87171">★</span> Serving all 50 US states</span>
-          <span class="topbar-divider">|</span>
-          <span class="topbar-item">Offices in New York City & Dallas</span>
-          <span class="topbar-divider">|</span>
-          <span class="topbar-item">Mon–Fri, 7am–7pm EST</span>
+          <span class="topbar-item highlight-item">
+            <span class="star-icon">★</span> Serving General Contractors & Subs Nationwide
+          </span>
+          <span class="topbar-divider">•</span>
+          <span class="topbar-item">
+            Regional Hubs: <strong>Austin, TX</strong> & <strong>New York, NY</strong>
+          </span>
+          <span class="topbar-divider">•</span>
+          <span class="topbar-item">
+            Mon–Sat, 6:30am–8:00pm EST
+          </span>
         </div>
         <div class="topbar-right">
-          <a href="tel:+18005550199" class="topbar-link"><span>📞</span> +1 (800) 555-0199</a>
+          <span class="guarantee-pill">⚡ 1-Hour Bid Review</span>
+          <a href="tel:+18005550199" class="topbar-link phone-link"><span>📞</span> (800) 555-0199</a>
           <span class="topbar-divider">|</span>
-          <a href="mailto:info@usestimatespro.com" class="topbar-link"><span>✉️</span> info@usestimatespro.com</a>
+          <a href="mailto:bids@usestimatespro.com" class="topbar-link"><span>✉️</span> bids@usestimatespro.com</a>
         </div>
       </div>
     </div>
@@ -41,51 +47,71 @@
     <nav class="navbar">
       <div class="container">
         <div class="nav-inner">
-          <div class="logo-container" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-            <svg class="logo-flag-icon" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="32" rx="3" fill="#ffffff" />
-              <rect y="0.0" width="48" height="2.46" fill="#dc2626" />
-              <rect y="4.92" width="48" height="2.46" fill="#dc2626" />
-              <rect y="9.84" width="48" height="2.46" fill="#dc2626" />
-              <rect y="14.76" width="48" height="2.46" fill="#dc2626" />
-              <rect y="19.68" width="48" height="2.46" fill="#dc2626" />
-              <rect y="24.6" width="48" height="2.46" fill="#dc2626" />
-              <rect y="29.52" width="48" height="2.48" fill="#dc2626" />
-              <rect width="22" height="17.2" rx="2" fill="#0b1a30" />
-              <g fill="#ffffff" font-size="4.2" font-family="sans-serif">
-                <text x="3" y="5.5">★</text>
-                <text x="8.5" y="5.5">★</text>
-                <text x="14" y="5.5">★</text>
-                <text x="5.8" y="9.8">★</text>
-                <text x="11.2" y="9.8">★</text>
-                <text x="3" y="14">★</text>
-                <text x="8.5" y="14">★</text>
-                <text x="14" y="14">★</text>
-              </g>
-            </svg>
-            <div class="logo-text-group">
-              <div class="logo-brand-name">US-ESTIMATES<span>PRO</span></div>
-              <div class="logo-tagline">Cost Estimation & Takeoffs</div>
+          <!-- Unique Redesigned Brand Logo -->
+          <div class="logo-clickable" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <div class="custom-brand-logo">
+              <svg class="brand-emblem-svg" viewBox="0 0 54 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="shieldGrad2" x1="0" y1="0" x2="54" y2="44" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#0f274a" />
+                    <stop offset="100%" stop-color="#081426" />
+                  </linearGradient>
+                  <linearGradient id="redGrad2" x1="0" y1="0" x2="30" y2="40" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#ef4444" />
+                    <stop offset="100%" stop-color="#b91c1c" />
+                  </linearGradient>
+                </defs>
+                <path d="M27 2L50 9V24C50 34.5 39 40.5 27 43.5C15 40.5 4 34.5 4 24V9L27 2Z" fill="url(#shieldGrad2)" stroke="#1e3a63" stroke-width="1.5" />
+                <clipPath id="shieldClip2">
+                  <path d="M27 2L50 9V24C50 34.5 39 40.5 27 43.5C15 40.5 4 34.5 4 24V9L27 2Z" />
+                </clipPath>
+                <g clip-path="url(#shieldClip2)">
+                  <rect x="25" y="0" width="30" height="4.5" fill="url(#redGrad2)" transform="rotate(8 25 0)" />
+                  <rect x="25" y="8" width="30" height="4.5" fill="#ffffff" transform="rotate(8 25 8)" />
+                  <rect x="25" y="16" width="30" height="4.5" fill="url(#redGrad2)" transform="rotate(8 25 16)" />
+                  <rect x="25" y="24" width="30" height="4.5" fill="#ffffff" transform="rotate(8 25 24)" />
+                  <rect x="25" y="32" width="30" height="5" fill="url(#redGrad2)" transform="rotate(8 25 32)" />
+                </g>
+                <path d="M25 3L25 43" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="2 1.5" />
+                <path d="M14 14L19 23H9L14 14Z" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="14" cy="23" r="1.5" fill="#f59e0b" />
+                <polygon points="14,6 15.3,9.5 19,9.5 16,11.8 17.2,15.2 14,13 10.8,15.2 12,11.8 9,9.5 12.7,9.5" fill="#f59e0b" />
+              </svg>
+              <div class="brand-text-block">
+                <div class="brand-primary-row">
+                  <span class="brand-us">US</span>
+                  <span class="brand-sep">·</span>
+                  <span class="brand-estimates">ESTIMATES</span>
+                  <span class="brand-pro-badge">PRO</span>
+                </div>
+                <div class="brand-tagline-text">
+                  Precision Takeoffs & Bid Consulting
+                </div>
+              </div>
             </div>
           </div>
 
+          <!-- Distinct Nav Labels -->
           <ul class="nav-menu">
-            <li><a href="#hero" class="nav-link active">Home</a></li>
-            <li><a href="#why-us" class="nav-link">About</a></li>
+            <li><a href="#hero" class="nav-link active">Overview</a></li>
+            <li><a href="#why-us" class="nav-link">Why Us</a></li>
             <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#quick-estimator" class="nav-link">Estimator</a></li>
-            <li><a href="#trades" class="nav-link">Portfolio</a></li>
-            <li><a href="#process" class="nav-link">Process</a></li>
+            <li><a href="#quick-estimator" class="nav-link">Takeoff Calculator <span class="nav-pill-new">TOOL</span></a></li>
+            <li><a href="#trades" class="nav-link">Trades Covered</a></li>
+            <li><a href="#process" class="nav-link">Workflow</a></li>
             <li><a href="#quote" class="nav-link">Contact</a></li>
           </ul>
 
           <div class="nav-actions">
-            <a href="#quote" class="btn btn-red">Request Quote →</a>
+            <a href="#quote" class="btn btn-red btn-header-cta">
+              <span>Submit Plans Now</span>
+              <span class="cta-arrow">→</span>
+            </a>
           </div>
         </div>
       </div>
     </nav>
-    <div class="header-stripes"></div>
+    <div class="header-stripes-modern"></div>
   </header>
 
   <!-- Hero with Video -->
@@ -117,7 +143,7 @@
         </p>
 
         <div class="hero-cta-group">
-          <a href="#quote" class="btn btn-red btn-lg">Request Quote (1-Hour Response) →</a>
+          <a href="#quote" class="btn btn-red btn-lg">Submit Plans Now (1-Hour Quote) →</a>
           <a href="#trades" class="btn btn-outline-white btn-lg">Explore CSI Divisions</a>
         </div>
 
@@ -305,7 +331,7 @@
           <div class="quote-direct-contact">
             <div style="color:#cbd5e1;font-size:0.88rem;">Need Immediate Assistance or have an urgent bid closing today?</div>
             <a href="tel:+18005550199" class="phone-number">📞 (800) 555-0199</a>
-            <div style="color:#94a3b8;font-size:0.8rem;margin-top:4px;">Senior Estimators on call Mon–Fri, 7am–7pm EST</div>
+            <div style="color:#94a3b8;font-size:0.8rem;margin-top:4px;">Senior Estimators on call Mon–Sat, 6:30am–8:00pm EST</div>
           </div>
         </div>
 
@@ -384,34 +410,51 @@
     <div class="container">
       <div class="footer-top-grid">
         <div>
-          <div class="logo-container" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-            <svg class="logo-flag-icon" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="32" rx="3" fill="#ffffff" />
-              <rect y="0.0" width="48" height="2.46" fill="#dc2626" />
-              <rect y="4.92" width="48" height="2.46" fill="#dc2626" />
-              <rect y="9.84" width="48" height="2.46" fill="#dc2626" />
-              <rect y="14.76" width="48" height="2.46" fill="#dc2626" />
-              <rect y="19.68" width="48" height="2.46" fill="#dc2626" />
-              <rect y="24.6" width="48" height="2.46" fill="#dc2626" />
-              <rect y="29.52" width="48" height="2.48" fill="#dc2626" />
-              <rect width="22" height="17.2" rx="2" fill="#0b1a30" />
-            </svg>
-            <div class="logo-text-group">
-              <div class="logo-brand-name" style="color:#fff">US-ESTIMATES<span>PRO</span></div>
-              <div class="logo-tagline" style="color:#94a3b8">Cost Estimation & Takeoffs</div>
+          <div class="logo-clickable" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <div class="custom-brand-logo">
+              <svg class="brand-emblem-svg" viewBox="0 0 54 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27 2L50 9V24C50 34.5 39 40.5 27 43.5C15 40.5 4 34.5 4 24V9L27 2Z" fill="#0b1a30" stroke="#1e3a63" stroke-width="1.5" />
+                <clipPath id="shieldClipF">
+                  <path d="M27 2L50 9V24C50 34.5 39 40.5 27 43.5C15 40.5 4 34.5 4 24V9L27 2Z" />
+                </clipPath>
+                <g clip-path="url(#shieldClipF)">
+                  <rect x="25" y="0" width="30" height="4.5" fill="#ef4444" transform="rotate(8 25 0)" />
+                  <rect x="25" y="8" width="30" height="4.5" fill="#ffffff" transform="rotate(8 25 8)" />
+                  <rect x="25" y="16" width="30" height="4.5" fill="#ef4444" transform="rotate(8 25 16)" />
+                  <rect x="25" y="24" width="30" height="4.5" fill="#ffffff" transform="rotate(8 25 24)" />
+                  <rect x="25" y="32" width="30" height="5" fill="#ef4444" transform="rotate(8 25 32)" />
+                </g>
+                <path d="M25 3L25 43" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="2 1.5" />
+                <path d="M14 14L19 23H9L14 14Z" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="14" cy="23" r="1.5" fill="#f59e0b" />
+                <polygon points="14,6 15.3,9.5 19,9.5 16,11.8 17.2,15.2 14,13 10.8,15.2 12,11.8 9,9.5 12.7,9.5" fill="#f59e0b" />
+              </svg>
+              <div class="brand-text-block">
+                <div class="brand-primary-row">
+                  <span class="brand-us" style="color:#fff">US</span>
+                  <span class="brand-sep">·</span>
+                  <span class="brand-estimates" style="color:#fff">ESTIMATES</span>
+                  <span class="brand-pro-badge">PRO</span>
+                </div>
+                <div class="brand-tagline-text" style="color:#94a3b8">
+                  Precision Takeoffs & Bid Consulting
+                </div>
+              </div>
             </div>
           </div>
           <p class="footer-about-text">
-            US Estimates Pro is an American outsourced construction cost estimating and material takeoff partner. Operating across all 50 US states with human senior estimators and RSMeans certified data.
+            US Estimates Pro is an independent American construction estimating consultancy. We supply General Contractors, Developers, and Subcontractors with verifiable, CSI-compliant quantity takeoffs and regional cost models across all 50 states.
           </p>
         </div>
         <div>
           <h4 class="footer-col-title">Navigation</h4>
           <ul class="footer-links-list">
-            <li><a href="#hero">Home</a></li>
+            <li><a href="#hero">Overview</a></li>
+            <li><a href="#why-us">Why Us</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#process">Our 3-Step Process</a></li>
-            <li><a href="#quote">Request Quote</a></li>
+            <li><a href="#quick-estimator">Takeoff Calculator</a></li>
+            <li><a href="#process">Workflow</a></li>
+            <li><a href="#quote">Submit Plans</a></li>
           </ul>
         </div>
         <div>
@@ -425,17 +468,17 @@
         </div>
         <div>
           <h4 class="footer-col-title">Contact</h4>
-          <div class="footer-contact-row"><span class="icon">📍</span><div>Wall Street Financial District<br />New York, NY 10005</div></div>
-          <div class="footer-contact-row"><span class="icon">📞</span><div><a href="tel:+18005550199" style="color:#f87171">+1 (800) 555-0199</a></div></div>
-          <div class="footer-contact-row"><span class="icon">✉️</span><div>info@usestimatespro.com</div></div>
+          <div class="footer-contact-row"><span class="icon">📍</span><div>Financial District, New York, NY 10005<br /><small style="color:#94a3b8">Hub: Austin, TX</small></div></div>
+          <div class="footer-contact-row"><span class="icon">📞</span><div><a href="tel:+18005550199" style="color:#f87171">(800) 555-0199</a></div></div>
+          <div class="footer-contact-row"><span class="icon">✉️</span><div>bids@usestimatespro.com</div></div>
         </div>
       </div>
       <div class="footer-bottom-bar">
         <div class="footer-bottom-inner">
-          <div>© 2024 US Estimates Pro (usestimatespro.com). All rights reserved.</div>
+          <div>© 2024 US Estimates Pro. All rights reserved.</div>
           <div style="display:flex;gap:20px;">
             <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="#">Terms & Bid Standards</a>
           </div>
         </div>
       </div>
@@ -452,4 +495,3 @@
   </script>
 </body>
 </html>
-

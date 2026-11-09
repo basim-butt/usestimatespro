@@ -230,7 +230,7 @@ button {
 .topbar {
   background-color: var(--navy-darkest);
   color: #cbd5e1;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   padding: 8px 0;
   font-family: var(--font-heading);
@@ -247,7 +247,7 @@ button {
 .topbar-left {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -255,16 +255,40 @@ button {
   display: flex;
   align-items: center;
   gap: 6px;
+  color: #cbd5e1;
+}
+
+.topbar-item.highlight-item {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.topbar-item .star-icon {
+  color: #f59e0b;
+  font-size: 0.9rem;
 }
 
 .topbar-divider {
-  color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.25);
+  font-weight: bold;
 }
 
 .topbar-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
+}
+
+.guarantee-pill {
+  background: rgba(220, 38, 38, 0.22);
+  color: #fca5a5;
+  border: 1px solid rgba(220, 38, 38, 0.45);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 50px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .topbar-link {
@@ -279,22 +303,38 @@ button {
   color: #f87171;
 }
 
-/* ===================== NAVBAR ===================== */
+.topbar-link.phone-link {
+  color: #ffffff;
+}
+
+.topbar-link.phone-link span {
+  color: #f87171;
+}
+
+/* ===================== NAVBAR & BRAND LOGO ===================== */
 .header-wrapper {
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: var(--white);
-  box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 20px rgba(11,26,48,0.06);
 }
 
-.header-stripes {
+.header-stripes-modern {
   height: 3px;
-  background: linear-gradient(90deg, var(--red) 0%, var(--red) 70%, var(--navy-dark) 70%, var(--navy-dark) 100%);
+  background: linear-gradient(
+    90deg,
+    #dc2626 0%,
+    #dc2626 40%,
+    #f59e0b 40.5%,
+    #f59e0b 42%,
+    #0b1a30 42.5%,
+    #0b1a30 100%
+  );
 }
 
 .navbar {
-  padding: 16px 0;
+  padding: 14px 0;
 }
 
 .nav-inner {
@@ -304,61 +344,79 @@ button {
   gap: 20px;
 }
 
-/* American Logo */
-.logo-container {
+/* Custom Shield Brand Logo */
+.logo-clickable {
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.custom-brand-logo {
   display: flex;
   align-items: center;
   gap: 12px;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-.logo-flag-icon {
-  width: 48px;
-  height: 36px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+.brand-emblem-svg {
+  width: 46px;
+  height: 40px;
+  filter: drop-shadow(0 3px 6px rgba(11, 26, 48, 0.16));
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
 }
 
-.logo-text-group {
+.logo-clickable:hover .brand-emblem-svg {
+  transform: scale(1.05);
+}
+
+.brand-text-block {
   display: flex;
   flex-direction: column;
 }
 
-.logo-brand-name {
+.brand-primary-row {
+  display: flex;
+  align-items: center;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
   font-weight: 900;
-  color: var(--navy-dark);
-  letter-spacing: -0.02em;
+  font-size: 1.45rem;
   line-height: 1;
+  letter-spacing: -0.01em;
 }
 
-.logo-brand-name span {
-  color: var(--red);
+.brand-us {
+  color: var(--navy-dark);
 }
 
-.logo-brand-name .pro-tag {
-  background: var(--navy-dark);
-  color: var(--white);
-  font-size: 0.72rem;
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-left: 5px;
-  letter-spacing: 0.05em;
+.brand-sep {
+  color: #f59e0b;
+  margin: 0 2px;
+  font-size: 1.2rem;
+}
+
+.brand-estimates {
+  color: var(--navy-dark);
+}
+
+.brand-pro-badge {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: #ffffff;
+  font-size: 0.74rem;
+  padding: 3px 7px;
+  border-radius: 4px;
+  margin-left: 6px;
+  letter-spacing: 0.08em;
   font-weight: 800;
-  vertical-align: middle;
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.35);
 }
 
-.logo-tagline {
+.brand-tagline-text {
   font-family: var(--font-heading);
   font-size: 0.65rem;
   font-weight: 700;
-  color: var(--text-muted);
-  letter-spacing: 0.16em;
+  color: #475569;
+  letter-spacing: 0.14em;
   margin-top: 3px;
   text-transform: uppercase;
 }
@@ -367,16 +425,19 @@ button {
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 22px;
 }
 
 .nav-link {
   font-family: var(--font-heading);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--text-dark);
   position: relative;
   padding: 6px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .nav-link:hover,
@@ -394,10 +455,47 @@ button {
   background-color: var(--red);
 }
 
+.nav-pill-new {
+  font-size: 0.62rem;
+  font-weight: 800;
+  background: #f1f5f9;
+  color: #0f274a;
+  border: 1px solid #cbd5e1;
+  padding: 1px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+}
+
+.btn-header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  font-size: 0.9rem;
+}
+
+.btn-header-cta .cta-arrow {
+  transition: transform 0.2s ease;
+}
+
+.btn-header-cta:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+.footer-badge-tag {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: #e2e8f0;
+  font-weight: 600;
 }
 
 .mobile-toggle {
