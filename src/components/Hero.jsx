@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react'
 
 export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0)
-  const dynamicWords = ['You Build.', 'You Win Bids.', 'You Scale.', 'We Deliver.']
+  const dynamicWords = ['You Win.', 'You Scale.', 'You Profit.']
 
   useEffect(() => {
     const interval = setInterval(() => {
       setWordIndex((prev) => (prev + 1) % dynamicWords.length)
-    }, 2800)
+    }, 2400)
     return () => clearInterval(interval)
   }, [dynamicWords.length])
 
   const scrollTo = (id) => {
     const el = document.getElementById(id)
     if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 80
+      const top = el.getBoundingClientRect().top + window.scrollY - 85
       window.scrollTo({ top, behavior: 'smooth' })
     }
   }
@@ -31,13 +31,8 @@ export default function Hero() {
           playsInline
           poster="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1920&q=80"
         >
-          {/* High-quality construction site & crane sunset video loops */}
           <source
             src="https://assets.mixkit.co/videos/preview/mixkit-set-of-craters-working-in-a-construction-site-4266-large.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
             type="video/mp4"
           />
         </video>
@@ -53,26 +48,26 @@ export default function Hero() {
             <span>America's Leading Construction Cost Estimation & Takeoff Partner</span>
           </div>
 
+          {/* Blended High-Impact Slogan */}
           <h1 className="hero-tagline">
-            We Estimate.
+            Bid Sharper. <span className="hero-tagline-white">Build Smarter.</span>
           </h1>
 
           <div className="hero-subtagline">
-            <span className="dynamic-word">{dynamicWords[wordIndex]}</span>
+            We Measure. You Build. <span className="dynamic-word">{dynamicWords[wordIndex]}</span>
           </div>
 
           <p className="hero-description">
-            Professional quantity takeoffs and material cost estimates for General Contractors,
-            Subcontractors, and Developers. Certified human senior estimators utilizing RSMeans
-            regional data for all 50 states with a guaranteed 24 to 48-hour turnaround.
+            The numbers behind America's winning contractors. Certified senior human estimators
+            delivering comprehensive CSI quantity takeoffs and 50-state RSMeans cost models in 24 to 48 hours.
           </p>
 
           <div className="hero-cta-group">
             <button className="btn btn-red btn-lg" onClick={() => scrollTo('quote')}>
-              Request Quote (1-Hour Response) →
+              Submit Plans For 1-Hour Quote →
             </button>
             <button className="btn btn-outline-white btn-lg" onClick={() => scrollTo('trades')}>
-              Explore CSI Divisions
+              View Core Trade Scopes
             </button>
           </div>
 

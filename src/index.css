@@ -639,13 +639,17 @@ button {
 /* "We Estimate." Slogan */
 .hero-tagline {
   font-family: var(--font-heading);
-  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  font-size: clamp(3rem, 6.5vw, 5.2rem);
   font-weight: 900;
   color: var(--red);
-  line-height: 1.05;
-  margin-bottom: 8px;
+  line-height: 1.08;
+  margin-bottom: 12px;
   letter-spacing: -0.02em;
   text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-tagline-white {
+  color: var(--white);
 }
 
 .hero-subtagline {
