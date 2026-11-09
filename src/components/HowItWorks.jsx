@@ -9,8 +9,8 @@ export default function HowItWorks() {
     },
     {
       num: '02',
-      title: 'Receive Fixed Quote in 1 Hour',
-      desc: 'Our senior review team analyzes the project scope and delivers a transparent, fixed-fee quote within 60 minutes. Zero obligation.',
+      title: 'Receive Fast Fixed Quote',
+      desc: 'Our senior review team analyzes the project scope and delivers a transparent, fixed-fee quote with zero obligation.',
     },
     {
       num: '03',

@@ -7,7 +7,6 @@ import Trades from './components/Trades'
 import HowItWorks from './components/HowItWorks'
 import WhyUs from './components/WhyUs'
 import Deliverables from './components/Deliverables'
-import Testimonials from './components/Testimonials'
 import QuoteForm from './components/QuoteForm'
 import Footer from './components/Footer'
 import BackToTop from './components/BackToTop'
@@ -23,7 +22,6 @@ export default function App() {
       <HowItWorks />
       <WhyUs />
       <Deliverables />
-      <Testimonials />
       <QuoteForm />
       <Footer />
       <BackToTop />

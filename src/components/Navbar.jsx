@@ -130,7 +130,6 @@ export default function Navbar() {
             </div>
 
             <div className="topbar-right">
-              <span className="guarantee-pill">⚡ 1-Hour Bid Review</span>
               <a href="tel:+18005550199" className="topbar-link phone-link">
                 <span>📞</span> (800) 555-0199
               </a>

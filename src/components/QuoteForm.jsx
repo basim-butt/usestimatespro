@@ -89,7 +89,7 @@ export default function QuoteForm() {
 
           {/* Right Column: Simplified, Streamlined Form */}
           <div className="quote-form-card">
-            <h4 className="form-header-title">Request Your 1-Hour Quote</h4>
+            <h4 className="form-header-title">Request Your Free Quote</h4>
             <p className="form-header-subtitle">
               Simple 1-minute plan submission. Zero obligation.
             </p>
@@ -102,7 +102,7 @@ export default function QuoteForm() {
                 </h3>
                 <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: 1.6 }}>
                   Our senior estimating team has started reviewing your drawings. You will receive an official
-                  fixed-fee quote in your inbox within <strong>60 minutes</strong>.
+                  fixed-fee quote in your inbox shortly.
                 </p>
                 <button
                   className="btn btn-navy"
@@ -238,7 +238,7 @@ export default function QuoteForm() {
                   style={{ width: '100%', padding: '14px', fontSize: '1rem' }}
                   disabled={loading}
                 >
-                  {loading ? 'Reviewing Your Request…' : 'Submit For 1-Hour Quote →'}
+                  {loading ? 'Reviewing Your Request…' : 'Submit Plans For Free Quote →'}
                 </button>
               </form>
             )}
