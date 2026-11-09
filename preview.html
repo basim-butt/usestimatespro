@@ -438,7 +438,7 @@
               </div>
               <div class="form-group">
                 <label class="form-label">Company Name</label>
-                <input type="text" class="form-control" placeholder="e.g. Miller Construction GC" />
+                <input type="text" class="form-control" placeholder="e.g. Miller Builders LLC" />
               </div>
             </div>
 
@@ -458,36 +458,41 @@
                 <label class="form-label">Project State *</label>
                 <select class="form-control" required>
                   <option value="">Select Project State</option>
-                  <option>California</option><option>Texas</option><option>Florida</option><option>New York</option><option>Illinois</option>
-                  <option>Ohio</option><option>Georgia</option><option>North Carolina</option><option>Pennsylvania</option>
+                  <option>New York</option><option>California</option><option>Texas</option><option>Florida</option><option>Illinois</option>
+                  <option>Ohio</option><option>Pennsylvania</option><option>Georgia</option><option>New Jersey</option>
                 </select>
               </div>
               <div class="form-group">
-                <label class="form-label">Project Type</label>
+                <label class="form-label">Trade / Scope Needed *</label>
                 <select class="form-control">
-                  <option>Commercial</option><option>Residential</option><option>Industrial</option><option>Civil</option>
+                  <option>All Trades (Full CSI Package)</option>
+                  <option>Div 03 — Concrete & Rebar</option>
+                  <option>Div 04 — Masonry & Stone</option>
+                  <option>Div 05 — Structural Steel</option>
+                  <option>Div 06 — Framing & Timber</option>
+                  <option>Div 09 — Drywall & Finishes</option>
+                  <option>Div 21–28 — Full MEP Package</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Upload Blueprints / Drawings (PDF, ZIP, DWG)</label>
+              <label class="form-label">Upload Blueprints or Drawings (PDF, ZIP, DWG)</label>
               <div class="file-drop-area">
                 <input type="file" onchange="document.getElementById('fileName').innerText = 'Selected: ' + this.files[0].name;" />
                 <div class="file-drop-icon">📁</div>
                 <div class="file-drop-text" id="fileName">
-                  <strong>Click here to upload files</strong> or drag and drop plans<br />
-                  <small style="color:#64748b">PDF, ZIP, DWG, BIM up to 100MB</small>
+                  <strong>Click to select drawings</strong> or drag files here<br />
+                  <small style="color:#64748b">PDF, ZIP, DWG up to 100MB (or paste link below)</small>
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="form-label">Notes or Online Plan Room Link</label>
-              <textarea class="form-control" rows="2" placeholder="Provide any specific addenda, bid date, or plan download link..."></textarea>
+              <input type="text" class="form-control" placeholder="Optional: Paste plan link (Dropbox, Google Drive, Procore) or notes..." />
             </div>
 
-            <button type="submit" class="btn btn-red" style="width:100%;padding:15px;">
+            <button type="submit" class="btn btn-red" style="width:100%;padding:14px;font-size:1rem;">
               Submit For 1-Hour Quote →
             </button>
           </form>

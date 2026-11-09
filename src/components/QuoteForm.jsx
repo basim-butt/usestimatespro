@@ -14,13 +14,11 @@ const usStates = [
 export default function QuoteForm() {
   const [formData, setFormData] = useState({
     name: '',
+    company: '',
     email: '',
     phone: '',
-    company: '',
     state: '',
-    projectType: 'Commercial',
-    scope: 'All Trades (Full Project)',
-    turnaround: 'Standard (24-48 Hours)',
+    scope: 'All Trades (Full CSI Package)',
     notes: '',
   })
   const [fileName, setFileName] = useState(null)
@@ -33,7 +31,7 @@ export default function QuoteForm() {
     setTimeout(() => {
       setLoading(false)
       setSubmitted(true)
-    }, 1200)
+    }, 1100)
   }
 
   const handleFileChange = (e) => {
@@ -46,39 +44,39 @@ export default function QuoteForm() {
     <section className="section quote-section" id="quote">
       <div className="container">
         <div className="quote-layout">
-          {/* Left Column */}
+          {/* Left Column: Quick Value Props */}
           <div className="quote-left-info">
-            <div className="section-tag navy">Free Project Review</div>
+            <div className="section-tag navy">Fast & Transparent</div>
             <h3>
               Submit Your Plans & Receive A Fixed Fee Proposal In <span style={{ color: '#f87171' }}>1 Hour</span>
             </h3>
             <p>
-              Upload your blueprints, architectural sets, and scope specifications. We will review
-              your drawings immediately and provide a flat-rate quote before any work starts.
+              Upload your drawings or paste your plan room link. Our senior estimators will review
+              your scope immediately and provide a guaranteed flat-rate price before any work begins.
             </p>
 
             <div className="quote-bullets">
               <div className="quote-bullet-item">
                 <span className="icon">✓</span>
-                <span>Fixed flat pricing with no hidden hourly surcharges</span>
+                <span>Guaranteed fixed flat fee — no surprise hourly invoices</span>
               </div>
               <div className="quote-bullet-item">
                 <span className="icon">✓</span>
-                <span>Reviewed by a certified human senior construction estimator</span>
+                <span>Audited by a veteran senior construction estimator</span>
               </div>
               <div className="quote-bullet-item">
                 <span className="icon">✓</span>
-                <span>Full Excel takeoff workbook + marked Bluebeam PDF sets</span>
+                <span>Complete editable Excel workbook + marked Bluebeam PDFs</span>
               </div>
               <div className="quote-bullet-item">
                 <span className="icon">✓</span>
-                <span>Confidential review & secure handling of all client blueprints</span>
+                <span>Confidential review & secure handling of all drawings</span>
               </div>
             </div>
 
             <div className="quote-direct-contact">
               <div style={{ color: '#cbd5e1', fontSize: '0.88rem' }}>
-                Need Immediate Assistance or have an urgent bid closing today?
+                Need immediate phone support or have a bid due today?
               </div>
               <a href="tel:+18005550199" className="phone-number">
                 📞 (800) 555-0199
@@ -89,11 +87,11 @@ export default function QuoteForm() {
             </div>
           </div>
 
-          {/* Right Column: Form */}
+          {/* Right Column: Simplified, Streamlined Form */}
           <div className="quote-form-card">
-            <h4 className="form-header-title">Request a Quick Quote</h4>
+            <h4 className="form-header-title">Request Your 1-Hour Quote</h4>
             <p className="form-header-subtitle">
-              Fill out your project specifications below. Zero obligation.
+              Simple 1-minute plan submission. Zero obligation.
             </p>
 
             {submitted ? (
@@ -103,7 +101,7 @@ export default function QuoteForm() {
                   Plans Received Successfully!
                 </h3>
                 <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: 1.6 }}>
-                  Our senior estimating team is reviewing your project details. You will receive an official
+                  Our senior estimating team has started reviewing your drawings. You will receive an official
                   fixed-fee quote in your inbox within <strong>60 minutes</strong>.
                 </p>
                 <button
@@ -133,7 +131,7 @@ export default function QuoteForm() {
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="e.g. Miller Construction GC"
+                      placeholder="e.g. Miller Builders LLC"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     />
@@ -182,59 +180,32 @@ export default function QuoteForm() {
                       ))}
                     </select>
                   </div>
-                  <div className="form-group">
-                    <label className="form-label">Project Type</label>
-                    <select
-                      className="form-control"
-                      value={formData.projectType}
-                      onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                    >
-                      <option>Commercial</option>
-                      <option>Residential</option>
-                      <option>Industrial / Warehouse</option>
-                      <option>Civil / Infrastructure</option>
-                      <option>Healthcare</option>
-                      <option>Education / Public</option>
-                    </select>
-                  </div>
-                </div>
 
-                <div className="form-grid-2">
                   <div className="form-group">
-                    <label className="form-label">Scope / CSI Divisions Required</label>
+                    <label className="form-label">Trade / Scope Needed *</label>
                     <select
                       className="form-control"
                       value={formData.scope}
                       onChange={(e) => setFormData({ ...formData, scope: e.target.value })}
                     >
-                      <option>All Trades (Full Project)</option>
+                      <option>All Trades (Full CSI Package)</option>
                       <option>Div 03 — Concrete & Rebar</option>
-                      <option>Div 04 — Masonry</option>
-                      <option>Div 05 — Structural & Misc Steel</option>
-                      <option>Div 06 — Framing & Millwork</option>
+                      <option>Div 04 — Masonry & Stone</option>
+                      <option>Div 05 — Structural Steel</option>
+                      <option>Div 06 — Framing & Timber</option>
                       <option>Div 07 — Roofing & Waterproofing</option>
                       <option>Div 08 — Doors & Windows</option>
-                      <option>Div 09 — Drywall, Paint & Finishes</option>
+                      <option>Div 09 — Drywall & Finishes</option>
                       <option>Div 21–28 — Full MEP Package</option>
-                      <option>Single Custom Division</option>
-                    </select>
-                  </div>
-                  <div className="form-group">
-                    <label className="form-label">Turnaround Urgency</label>
-                    <select
-                      className="form-control"
-                      value={formData.turnaround}
-                      onChange={(e) => setFormData({ ...formData, turnaround: e.target.value })}
-                    >
-                      <option>Standard (24–48 Hours)</option>
-                      <option>Priority Rush (Same Day / 24h)</option>
-                      <option>Flexible / Preliminary Budget</option>
+                      <option>Civil, Site & Earthwork</option>
+                      <option>Custom Single Scope</option>
                     </select>
                   </div>
                 </div>
 
+                {/* Upload or Link Area */}
                 <div className="form-group">
-                  <label className="form-label">Upload Blueprints / Drawings / Link (PDF, ZIP, DWG)</label>
+                  <label className="form-label">Upload Plans or Drawings (PDF, ZIP, DWG)</label>
                   <div className="file-drop-area">
                     <input type="file" onChange={handleFileChange} />
                     <div className="file-drop-icon">📁</div>
@@ -243,8 +214,8 @@ export default function QuoteForm() {
                         <strong style={{ color: '#16a34a' }}>Selected: {fileName}</strong>
                       ) : (
                         <span>
-                          <strong>Click here to upload files</strong> or drag and drop plans<br />
-                          <small style={{ color: '#64748b' }}>PDF, ZIP, DWG, BIM up to 100MB (Or paste Dropbox/Drive link below)</small>
+                          <strong>Click to select drawings</strong> or drag files here<br />
+                          <small style={{ color: '#64748b' }}>PDF, ZIP, DWG up to 100MB (or paste link below)</small>
                         </span>
                       )}
                     </div>
@@ -252,11 +223,10 @@ export default function QuoteForm() {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label">Notes or Online Plan Room Link</label>
-                  <textarea
+                  <input
+                    type="text"
                     className="form-control"
-                    rows="2"
-                    placeholder="Provide any specific addenda, bid date, or plan download link (Google Drive, Dropbox, BuildingConnected)..."
+                    placeholder="Optional: Paste plan link (Dropbox, Google Drive, Procore) or notes..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   />
@@ -265,10 +235,10 @@ export default function QuoteForm() {
                 <button
                   type="submit"
                   className="btn btn-red"
-                  style={{ width: '100%', padding: '15px' }}
+                  style={{ width: '100%', padding: '14px', fontSize: '1rem' }}
                   disabled={loading}
                 >
-                  {loading ? 'Submitting Drawings…' : 'Submit For 1-Hour Quote →'}
+                  {loading ? 'Reviewing Your Request…' : 'Submit For 1-Hour Quote →'}
                 </button>
               </form>
             )}

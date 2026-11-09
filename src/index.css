@@ -399,6 +399,16 @@ button {
   color: var(--navy-dark);
 }
 
+/* White logo brand text in dark footer */
+.main-footer .brand-us,
+.main-footer .brand-estimates {
+  color: #ffffff !important;
+}
+
+.main-footer .brand-tagline-text {
+  color: #cbd5e1;
+}
+
 .brand-pro-badge {
   background: linear-gradient(135deg, #dc2626, #b91c1c);
   color: #ffffff;
