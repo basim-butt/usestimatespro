@@ -1,104 +1,95 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const allTrades = [
-  { div: 'DIV 01', title: 'General Requirements', desc: 'Permits, temp facilities, superintendent, safety & mobilization.' },
-  { div: 'DIV 02', title: 'Existing Conditions', desc: 'Demolition, site clearing, grading, remediation & earthwork.' },
-  { div: 'DIV 03', title: 'Concrete', desc: 'Footings, slabs on grade, elevated decks, rebar & precast.' },
-  { div: 'DIV 04', title: 'Masonry', desc: 'CMU block, brick veneer, stone, tuckpointing & lintels.' },
-  { div: 'DIV 05', title: 'Metals', desc: 'Structural steel columns, beams, bar joists, deck & metal stairs.' },
-  { div: 'DIV 06', title: 'Wood & Plastics', desc: 'Rough framing, lumber, architectural casework & millwork.' },
-  { div: 'DIV 07', title: 'Thermal & Moisture', desc: 'TPO/EPDM roofing, shingles, waterproofing & wall insulation.' },
-  { div: 'DIV 08', title: 'Openings', desc: 'Storefronts, curtain walls, hollow metal doors & hardware.' },
-  { div: 'DIV 09', title: 'Finishes', desc: 'Drywall, metal framing, acoustic ceilings, paint & flooring.' },
-  { div: 'DIV 10', title: 'Specialties', desc: 'Toilet partitions, fire extinguishers, signage & lockers.' },
-  { div: 'DIV 11', title: 'Equipment', desc: 'Commercial kitchen, medical appliances & loading dock gear.' },
-  { div: 'DIV 12', title: 'Furnishings', desc: 'Window shades, laboratory counters & fixed seating.' },
-  { div: 'DIV 21', title: 'Fire Suppression', desc: 'Wet/dry sprinkler systems, pumps & standpipe connections.' },
-  { div: 'DIV 22', title: 'Plumbing', desc: 'Sanitary waste, domestic water lines, vents & plumbing fixtures.' },
-  { div: 'DIV 23', title: 'HVAC (Mechanical)', desc: 'Rooftop units, ductwork, piping, VAV boxes & chillers.' },
-  { div: 'DIV 26', title: 'Electrical', desc: 'Switchgear, distribution panels, conduit, wire & lighting fixtures.' },
-  { div: 'DIV 27', title: 'Communications', desc: 'Structured cabling, server racks, fiber & low voltage lines.' },
-  { div: 'DIV 28', title: 'Electronic Safety', desc: 'Fire alarm, access control, CCTV & intrusion detection.' },
-  { div: 'DIV 31', title: 'Earthwork', desc: 'Excavation, trenching, backfill & site compaction.' },
-  { div: 'DIV 32', title: 'Exterior Improvements', desc: 'Asphalt paving, concrete curbs, fencing & landscaping.' },
-  { div: 'DIV 33', title: 'Utilities', desc: 'Stormwater management, sanitary sewer & water mains.' },
+const tradePillars = [
+  {
+    icon: '🏗️',
+    title: 'Structural & Core',
+    divs: 'DIV 02 – 06',
+    desc: 'Foundations, framing, and heavy core construction scopes.',
+    items: ['Concrete & Rebar', 'Masonry & CMU', 'Structural Steel', 'Lumber & Framing', 'Earthwork & Demo'],
+  },
+  {
+    icon: '🏢',
+    title: 'Building Envelope',
+    divs: 'DIV 07 – 08',
+    desc: 'Exterior skin, moisture barriers, and architectural openings.',
+    items: ['Roofing (TPO/EPDM)', 'Waterproofing', 'Curtain Walls', 'Doors & Windows', 'Metal Panels & Siding'],
+  },
+  {
+    icon: '🎨',
+    title: 'Interior Finishes',
+    divs: 'DIV 09 – 12',
+    desc: 'Complete architectural fit-out and commercial interior trades.',
+    items: ['Drywall & Metal Studs', 'Paint & Wall Coverings', 'Acoustical Ceilings', 'Flooring & Tile', 'Millwork & Specialties'],
+  },
+  {
+    icon: '⚡',
+    title: 'MEP Systems',
+    divs: 'DIV 21 – 28',
+    desc: 'Complete mechanical, electrical, plumbing & life safety.',
+    items: ['HVAC & Ductwork', 'Plumbing & Piping', 'Electrical & Switchgear', 'Fire Protection', 'Low Voltage & Security'],
+  },
 ]
 
 export default function Trades() {
-  const [filter, setFilter] = useState('all')
-
-  const filteredTrades = allTrades.filter((t) => {
-    if (filter === 'structural') return ['DIV 02', 'DIV 03', 'DIV 04', 'DIV 05', 'DIV 06'].includes(t.div)
-    if (filter === 'envelope') return ['DIV 07', 'DIV 08'].includes(t.div)
-    if (filter === 'finishes') return ['DIV 09', 'DIV 10', 'DIV 11', 'DIV 12'].includes(t.div)
-    if (filter === 'mep') return ['DIV 21', 'DIV 22', 'DIV 23', 'DIV 26', 'DIV 27', 'DIV 28'].includes(t.div)
-    if (filter === 'civil') return ['DIV 31', 'DIV 32', 'DIV 33'].includes(t.div)
-    return true
-  })
+  const scrollToQuote = () => {
+    const el = document.getElementById('quote')
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 85
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
+  }
 
   return (
     <section className="section trades-section" id="trades">
       <div className="container">
         <div className="text-center">
-          <div className="section-tag">CSI MasterFormat Expertise</div>
+          <div className="section-tag">CSI MasterFormat Coverage</div>
           <h2 className="section-title">
-            All Construction Trades & <span className="text-red">Divisions Covered</span>
+            All Construction Trades <span className="text-red">Covered</span>
           </h2>
-          <p className="section-desc">
-            We adhere strictly to CSI MasterFormat standards, ensuring seamless integration into
-            your estimating workflows, Procore, PlanSwift, or Bluebeam sets.
+          <p className="section-desc" style={{ marginBottom: '36px' }}>
+            From single-trade subcontractors to full General Contractor CSI packages.
+            Every division is itemized, verified, and bid-ready.
           </p>
-
-          <div className="trades-filter-bar">
-            <button
-              className={`trade-filter-btn ${filter === 'all' ? 'active' : ''}`}
-              onClick={() => setFilter('all')}
-            >
-              All Trades (16/50 Divs)
-            </button>
-            <button
-              className={`trade-filter-btn ${filter === 'structural' ? 'active' : ''}`}
-              onClick={() => setFilter('structural')}
-            >
-              Structural (Div 02-06)
-            </button>
-            <button
-              className={`trade-filter-btn ${filter === 'envelope' ? 'active' : ''}`}
-              onClick={() => setFilter('envelope')}
-            >
-              Building Envelope (Div 07-08)
-            </button>
-            <button
-              className={`trade-filter-btn ${filter === 'finishes' ? 'active' : ''}`}
-              onClick={() => setFilter('finishes')}
-            >
-              Interiors & Finishes (Div 09-12)
-            </button>
-            <button
-              className={`trade-filter-btn ${filter === 'mep' ? 'active' : ''}`}
-              onClick={() => setFilter('mep')}
-            >
-              MEP Systems (Div 21-28)
-            </button>
-            <button
-              className={`trade-filter-btn ${filter === 'civil' ? 'active' : ''}`}
-              onClick={() => setFilter('civil')}
-            >
-              Site & Civil (Div 31-33)
-            </button>
-          </div>
         </div>
 
-        <div className="trades-grid">
-          {filteredTrades.map((trade) => (
-            <div className="trade-item-card" key={trade.div}>
-              <div className="trade-div-badge">{trade.div}</div>
-              <div className="trade-item-info">
-                <h4>{trade.title}</h4>
-                <p>{trade.desc}</p>
+        {/* Concise 4-Pillar Grid */}
+        <div className="trades-pillar-grid">
+          {tradePillars.map((p) => (
+            <div className="trade-pillar-card" key={p.title}>
+              <div className="pillar-header">
+                <span className="pillar-icon">{p.icon}</span>
+                <span className="pillar-div-tag">{p.divs}</span>
               </div>
+              <h3 className="pillar-title">{p.title}</h3>
+              <p className="pillar-desc">{p.desc}</p>
+              
+              <div className="pillar-chips">
+                {p.items.map((item) => (
+                  <span className="pillar-chip" key={item}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <button
+                className="pillar-action-link"
+                onClick={scrollToQuote}
+              >
+                Estimate This Scope →
+              </button>
             </div>
           ))}
+        </div>
+
+        {/* Concise Bottom Trust Strip */}
+        <div className="trades-compact-footer">
+          <span>✓ All 16 & 50 MasterFormat Divisions Available</span>
+          <span className="dot-sep">•</span>
+          <span>✓ Subcontractor Trade Packages</span>
+          <span className="dot-sep">•</span>
+          <span>✓ Full GC Turnkey Takeoffs</span>
         </div>
       </div>
     </section>
