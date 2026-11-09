@@ -77,15 +77,6 @@ export default function Footer() {
               </div>
             </div>
             <div className="footer-contact-row">
-              <span className="icon">📞</span>
-              <div>
-                <strong>Direct Estimating Line:</strong><br />
-                <a href="tel:+18005550199" style={{ color: '#f87171', fontWeight: 700, fontSize: '1rem' }}>
-                  (800) 555-0199
-                </a>
-              </div>
-            </div>
-            <div className="footer-contact-row">
               <span className="icon">✉️</span>
               <div>
                 <a href="mailto:info@usestimatespro.com" style={{ color: '#e2e8f0' }}>

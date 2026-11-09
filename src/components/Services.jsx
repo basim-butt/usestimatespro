@@ -58,7 +58,7 @@ const servicesData = [
     bullets: [
       'Dedicated senior estimator assigned',
       'Same-day or 24-hour turnaround',
-      'Continuous direct phone support',
+      'Continuous direct priority support',
     ],
   },
 ]

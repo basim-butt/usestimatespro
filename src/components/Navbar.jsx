@@ -130,10 +130,6 @@ export default function Navbar() {
             </div>
 
             <div className="topbar-right">
-              <a href="tel:+18005550199" className="topbar-link phone-link">
-                <span>📞</span> (800) 555-0199
-              </a>
-              <span className="topbar-divider">|</span>
               <a href="mailto:info@usestimatespro.com" className="topbar-link">
                 <span>✉️</span> info@usestimatespro.com
               </a>

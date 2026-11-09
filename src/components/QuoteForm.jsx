@@ -16,7 +16,6 @@ export default function QuoteForm() {
     name: '',
     company: '',
     email: '',
-    phone: '',
     state: '',
     scope: 'All Trades (Full CSI Package)',
     notes: '',
@@ -73,18 +72,6 @@ export default function QuoteForm() {
                 <span>Confidential review & secure handling of all drawings</span>
               </div>
             </div>
-
-            <div className="quote-direct-contact">
-              <div style={{ color: '#cbd5e1', fontSize: '0.88rem' }}>
-                Need immediate phone support or have a bid due today?
-              </div>
-              <a href="tel:+18005550199" className="phone-number">
-                📞 (800) 555-0199
-              </a>
-              <div style={{ color: '#94a3b8', fontSize: '0.8rem', marginTop: '4px' }}>
-                Senior Estimators on call Mon–Fri, 9:00am–5:00pm EST
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Simplified, Streamlined Form */}
@@ -138,29 +125,16 @@ export default function QuoteForm() {
                   </div>
                 </div>
 
-                <div className="form-grid-2">
-                  <div className="form-group">
-                    <label className="form-label">Work Email *</label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      placeholder="john@company.com"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label className="form-label">Phone Number *</label>
-                    <input
-                      type="tel"
-                      className="form-control"
-                      placeholder="(555) 000-0000"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    />
-                  </div>
+                <div className="form-group">
+                  <label className="form-label">Work Email *</label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    placeholder="john@company.com"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  />
                 </div>
 
                 <div className="form-grid-2">
