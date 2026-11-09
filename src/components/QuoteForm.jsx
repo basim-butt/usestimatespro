@@ -72,7 +72,7 @@ export default function QuoteForm() {
               </div>
               <div className="quote-bullet-item">
                 <span className="icon">✓</span>
-                <span>Strict Non-Disclosure (NDA) protection for all client drawings</span>
+                <span>Confidential review & secure handling of all client blueprints</span>
               </div>
             </div>
 

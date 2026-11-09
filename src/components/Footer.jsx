@@ -34,7 +34,7 @@ export default function Footer() {
               <span className="footer-badge-tag">🇺🇸 ASPE Guidelines</span>
               <span className="footer-badge-tag">📊 RSMeans Local Rates</span>
               <span className="footer-badge-tag">⚡ 24–48h Bid Delivery</span>
-              <span className="footer-badge-tag">🔒 Strict NDA Protection</span>
+              <span className="footer-badge-tag">🔒 100% Confidential</span>
             </div>
           </div>
 
@@ -113,7 +113,6 @@ export default function Footer() {
             <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
               <a href="#">Privacy Policy</a>
               <a href="#">Terms & Bid Standards</a>
-              <a href="#">Non-Disclosure Agreement (NDA)</a>
               <a href="#">Client Portal</a>
             </div>
           </div>
