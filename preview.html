@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>US Estimates Pro | Construction Cost Estimation & Quantity Takeoffs</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230b1a30'/><rect y='66' width='100' height='34' rx='4' fill='%23dc2626'/><text y='58' x='50' text-anchor='middle' font-size='44' font-family='sans-serif' font-weight='900' fill='white'>US</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/index.css" />
+  <style>
+    /* Standalone Preview Styling */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="topbar-left">
+          <span class="topbar-item"><span style="color:#f87171">★</span> Serving all 50 US states</span>
+          <span class="topbar-divider">|</span>
+          <span class="topbar-item">Offices in New York City & Dallas</span>
+          <span class="topbar-divider">|</span>
+          <span class="topbar-item">Mon–Fri, 7am–7pm EST</span>
+        </div>
+        <div class="topbar-right">
+          <a href="tel:+18005550199" class="topbar-link"><span>📞</span> +1 (800) 555-0199</a>
+          <span class="topbar-divider">|</span>
+          <a href="mailto:info@usestimatespro.com" class="topbar-link"><span>✉️</span> info@usestimatespro.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="header-wrapper">
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+          <div class="logo-container" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <svg class="logo-flag-icon" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="32" rx="3" fill="#ffffff" />
+              <rect y="0.0" width="48" height="2.46" fill="#dc2626" />
+              <rect y="4.92" width="48" height="2.46" fill="#dc2626" />
+              <rect y="9.84" width="48" height="2.46" fill="#dc2626" />
+              <rect y="14.76" width="48" height="2.46" fill="#dc2626" />
+              <rect y="19.68" width="48" height="2.46" fill="#dc2626" />
+              <rect y="24.6" width="48" height="2.46" fill="#dc2626" />
+              <rect y="29.52" width="48" height="2.48" fill="#dc2626" />
+              <rect width="22" height="17.2" rx="2" fill="#0b1a30" />
+              <g fill="#ffffff" font-size="4.2" font-family="sans-serif">
+                <text x="3" y="5.5">★</text>
+                <text x="8.5" y="5.5">★</text>
+                <text x="14" y="5.5">★</text>
+                <text x="5.8" y="9.8">★</text>
+                <text x="11.2" y="9.8">★</text>
+                <text x="3" y="14">★</text>
+                <text x="8.5" y="14">★</text>
+                <text x="14" y="14">★</text>
+              </g>
+            </svg>
+            <div class="logo-text-group">
+              <div class="logo-brand-name">US-ESTIMATES<span>PRO</span></div>
+              <div class="logo-tagline">Cost Estimation & Takeoffs</div>
+            </div>
+          </div>
+
+          <ul class="nav-menu">
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#why-us" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#quick-estimator" class="nav-link">Estimator</a></li>
+            <li><a href="#trades" class="nav-link">Portfolio</a></li>
+            <li><a href="#process" class="nav-link">Process</a></li>
+            <li><a href="#quote" class="nav-link">Contact</a></li>
+          </ul>
+
+          <div class="nav-actions">
+            <a href="#quote" class="btn btn-red">Request Quote →</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header-stripes"></div>
+  </header>
+
+  <!-- Hero with Video -->
+  <section class="hero-video-section" id="hero">
+    <div class="video-background-wrapper">
+      <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1920&q=80">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-set-of-craters-working-in-a-construction-site-4266-large.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+      <div class="hero-grid-pattern"></div>
+    </div>
+
+    <div class="container hero-content-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="flag-emoji">🇺🇸</span>
+          <span>America's Leading Construction Cost Estimation & Takeoff Partner</span>
+        </div>
+
+        <h1 class="hero-tagline">We Estimate.</h1>
+        <div class="hero-subtagline">
+          <span class="dynamic-word" id="dynamicWord">You Build.</span>
+        </div>
+
+        <p class="hero-description">
+          Professional quantity takeoffs and material cost estimates for General Contractors,
+          Subcontractors, and Developers. Certified human senior estimators utilizing RSMeans
+          regional data for all 50 states with a guaranteed 24 to 48-hour turnaround.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#quote" class="btn btn-red btn-lg">Request Quote (1-Hour Response) →</a>
+          <a href="#trades" class="btn btn-outline-white btn-lg">Explore CSI Divisions</a>
+        </div>
+
+        <div class="hero-stats-row">
+          <div class="hero-stat-card">
+            <div class="hero-stat-number">24–48<span>hr</span></div>
+            <div class="hero-stat-label">Fastest Turnaround Guaranteed</div>
+          </div>
+          <div class="hero-stat-card">
+            <div class="hero-stat-number">98.4<span>%</span></div>
+            <div class="hero-stat-label">Verified Bid Accuracy Rate</div>
+          </div>
+          <div class="hero-stat-card">
+            <div class="hero-stat-number">50<span>/50</span></div>
+            <div class="hero-stat-label">US States & RSMeans Indexes</div>
+          </div>
+          <div class="hero-stat-card">
+            <div class="hero-stat-number">100<span>%</span></div>
+            <div class="hero-stat-label">Senior Human Estimators</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Scope Estimator Bar -->
+  <div class="quick-tool-bar" id="quick-estimator">
+    <div class="container">
+      <div class="tool-bar-inner">
+        <div class="tool-bar-heading">
+          <h3>⚡ Instant Scope Estimator & Plan Review</h3>
+          <p>Select your project details for an immediate turnaround estimate & fee proposal.</p>
+        </div>
+        <div class="tool-bar-inputs">
+          <select class="tool-select">
+            <option>🏢 Commercial Building</option>
+            <option>🏘️ Residential Single/Multi-Family</option>
+            <option>🏭 Industrial & Warehouse</option>
+            <option>🏥 Healthcare & Hospital</option>
+          </select>
+          <select class="tool-select">
+            <option>All 16/50 CSI Divisions (Full GC)</option>
+            <option>Div 03 — Concrete & Rebar</option>
+            <option>Div 04 — Masonry & Stone</option>
+            <option>Div 05 — Structural Steel</option>
+            <option>Div 21–28 — Full MEP Package</option>
+            <option>Div 09 — Drywall & Finishes</option>
+          </select>
+          <a href="#quote" class="btn btn-red">Get Fixed Price Quote →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag">Core Capabilities</div>
+        <h2 class="section-title">Professional Estimating Services <span class="text-red">You Can Bid On</span></h2>
+        <p class="section-desc">We deliver thorough, verifiable estimates backed by senior estimators with 10+ years of field experience.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon-box">📐</div>
+          <h3 class="service-title">Quantity Takeoffs</h3>
+          <p class="service-desc">Precision material and labor counts generated from architectural and structural drawings. Itemized by CSI division for seamless bid compilation.</p>
+          <ul class="service-bullets">
+            <li>Line-by-line itemization</li>
+            <li>Material wastage factors included</li>
+            <li>Digital color-coded plan markups</li>
+          </ul>
+          <a href="#quote" class="service-link">Request Quote For This Trade →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">💲</div>
+          <h3 class="service-title">RSMeans Cost Estimating</h3>
+          <p class="service-desc">Cost models backed by regional RSMeans data, incorporating zip-code specific union and non-union labor rates, equipment, and current material pricing.</p>
+          <ul class="service-bullets">
+            <li>All 50 US State City Cost Indexes</li>
+            <li>Union & open-shop labor rate models</li>
+            <li>Equipment & overhead adjustments</li>
+          </ul>
+          <a href="#quote" class="service-link">Request Quote For This Trade →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">📋</div>
+          <h3 class="service-title">Complete Bid Packages</h3>
+          <p class="service-desc">Bid-ready proposals formatted for General Contractors and Subcontractors to submit immediately to project owners, developers, or municipal agencies.</p>
+          <ul class="service-bullets">
+            <li>CSI MasterFormat Master Sheets</li>
+            <li>Executive Summary & Inclusions/Exclusions</li>
+            <li>General Conditions & Overhead Allocations</li>
+          </ul>
+          <a href="#quote" class="service-link">Request Quote For This Trade →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">💡</div>
+          <h3 class="service-title">Value Engineering (VE)</h3>
+          <p class="service-desc">Strategic cost-reduction alternatives analyzing material substitutions, assembly methods, and schedule optimizations to preserve margin and win contracts.</p>
+          <ul class="service-bullets">
+            <li>Alternative material cost comparisons</li>
+            <li>Constructability review notes</li>
+            <li>Budget balancing without quality loss</li>
+          </ul>
+          <a href="#quote" class="service-link">Request Quote For This Trade →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">🏗️</div>
+          <h3 class="service-title">Single-Trade Estimates</h3>
+          <p class="service-desc">Specialized takeoff packages tailored specifically for trade subcontractors needing rapid, high-accuracy numbers for targeted bid packages.</p>
+          <ul class="service-bullets">
+            <li>Concrete, Masonry, Framing & Drywall</li>
+            <li>Complete MEP (Div 21, 22, 23, 26, 28)</li>
+            <li>Roofing, Insulation & Siding</li>
+          </ul>
+          <a href="#quote" class="service-link">Request Quote For This Trade →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">⚡</div>
+          <h3 class="service-title">Rush 24-Hour Delivery</h3>
+          <p class="service-desc">Fast-track estimating team ready to handle pressing bid deadlines. Emergency turnaround without sacrificing an ounce of precision or senior review.</p>
+          <ul class="service-bullets">
+            <li>Dedicated senior estimator assigned</li>
+            <li>Same-day or 24-hour turnaround</li>
+            <li>Continuous direct phone support</li>
+          </ul>
+          <a href="#quote" class="service-link">Request Quote For This Trade →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section process-section" id="process">
+    <div class="container">
+      <div class="text-center">
+        <div class="section-tag">Simple & Fast</div>
+        <h2 class="section-title">Our 3-Step <span class="text-red">Estimating Process</span></h2>
+        <p class="section-desc">Designed to integrate directly into your fast-paced bid cycles.</p>
+      </div>
+
+      <div class="process-steps-row">
+        <div class="process-step-box">
+          <div class="process-step-num">01</div>
+          <h3>Submit Drawings & Specs</h3>
+          <p>Upload your architectural, structural, or MEP drawings via our secure portal. We accept PDF, DWG, and BIM/Revit models.</p>
+        </div>
+        <div class="process-step-box">
+          <div class="process-step-num">02</div>
+          <h3>Receive Fixed Quote in 1 Hour</h3>
+          <p>Our senior review team analyzes the project scope and delivers a transparent, fixed-fee quote within 60 minutes.</p>
+        </div>
+        <div class="process-step-box">
+          <div class="process-step-num">03</div>
+          <h3>Get Bid-Ready Takeoffs in 24-48h</h3>
+          <p>Receive your itemized Excel workbook, color-coded PlanSwift markups, and executive bid summary ready for immediate submission.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Section -->
+  <section class="section quote-section" id="quote">
+    <div class="container">
+      <div class="quote-layout">
+        <div class="quote-left-info">
+          <div class="section-tag navy">Free Project Review</div>
+          <h3>Submit Your Plans & Receive A Fixed Fee Proposal In <span style="color:#f87171">1 Hour</span></h3>
+          <p>Upload your blueprints, architectural sets, and scope specifications. We review your drawings immediately and provide a flat-rate quote.</p>
+
+          <div class="quote-bullets">
+            <div class="quote-bullet-item"><span class="icon">✓</span><span>Fixed flat pricing with no hidden hourly surcharges</span></div>
+            <div class="quote-bullet-item"><span class="icon">✓</span><span>Reviewed by a certified human senior construction estimator</span></div>
+            <div class="quote-bullet-item"><span class="icon">✓</span><span>Full Excel takeoff workbook + marked Bluebeam PDF sets</span></div>
+            <div class="quote-bullet-item"><span class="icon">✓</span><span>Strict Non-Disclosure (NDA) protection for all client drawings</span></div>
+          </div>
+
+          <div class="quote-direct-contact">
+            <div style="color:#cbd5e1;font-size:0.88rem;">Need Immediate Assistance or have an urgent bid closing today?</div>
+            <a href="tel:+18005550199" class="phone-number">📞 (800) 555-0199</a>
+            <div style="color:#94a3b8;font-size:0.8rem;margin-top:4px;">Senior Estimators on call Mon–Fri, 7am–7pm EST</div>
+          </div>
+        </div>
+
+        <div class="quote-form-card">
+          <h4 class="form-header-title">Request a Quick Quote</h4>
+          <p class="form-header-subtitle">Fill out your project specifications below. Zero obligation.</p>
+
+          <form onsubmit="event.preventDefault(); alert('Plans received! Our senior team will review and email your 1-hour quote.');">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-control" placeholder="e.g. John Miller" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Company Name</label>
+                <input type="text" class="form-control" placeholder="e.g. Miller Construction GC" />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Work Email *</label>
+                <input type="email" class="form-control" placeholder="john@company.com" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone Number *</label>
+                <input type="tel" class="form-control" placeholder="(555) 000-0000" required />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Project State *</label>
+                <select class="form-control" required>
+                  <option value="">Select Project State</option>
+                  <option>California</option><option>Texas</option><option>Florida</option><option>New York</option><option>Illinois</option>
+                  <option>Ohio</option><option>Georgia</option><option>North Carolina</option><option>Pennsylvania</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Project Type</label>
+                <select class="form-control">
+                  <option>Commercial</option><option>Residential</option><option>Industrial</option><option>Civil</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Upload Blueprints / Drawings (PDF, ZIP, DWG)</label>
+              <div class="file-drop-area">
+                <input type="file" onchange="document.getElementById('fileName').innerText = 'Selected: ' + this.files[0].name;" />
+                <div class="file-drop-icon">📁</div>
+                <div class="file-drop-text" id="fileName">
+                  <strong>Click here to upload files</strong> or drag and drop plans<br />
+                  <small style="color:#64748b">PDF, ZIP, DWG, BIM up to 100MB</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Notes or Online Plan Room Link</label>
+              <textarea class="form-control" rows="2" placeholder="Provide any specific addenda, bid date, or plan download link..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-red" style="width:100%;padding:15px;">
+              Submit For 1-Hour Quote →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="logo-container" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <svg class="logo-flag-icon" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="48" height="32" rx="3" fill="#ffffff" />
+              <rect y="0.0" width="48" height="2.46" fill="#dc2626" />
+              <rect y="4.92" width="48" height="2.46" fill="#dc2626" />
+              <rect y="9.84" width="48" height="2.46" fill="#dc2626" />
+              <rect y="14.76" width="48" height="2.46" fill="#dc2626" />
+              <rect y="19.68" width="48" height="2.46" fill="#dc2626" />
+              <rect y="24.6" width="48" height="2.46" fill="#dc2626" />
+              <rect y="29.52" width="48" height="2.48" fill="#dc2626" />
+              <rect width="22" height="17.2" rx="2" fill="#0b1a30" />
+            </svg>
+            <div class="logo-text-group">
+              <div class="logo-brand-name" style="color:#fff">US-ESTIMATES<span>PRO</span></div>
+              <div class="logo-tagline" style="color:#94a3b8">Cost Estimation & Takeoffs</div>
+            </div>
+          </div>
+          <p class="footer-about-text">
+            US Estimates Pro is an American outsourced construction cost estimating and material takeoff partner. Operating across all 50 US states with human senior estimators and RSMeans certified data.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Our 3-Step Process</a></li>
+            <li><a href="#quote">Request Quote</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Core Divisions</h4>
+          <ul class="footer-links-list">
+            <li><a href="#trades">Div 03 — Concrete</a></li>
+            <li><a href="#trades">Div 04 — Masonry</a></li>
+            <li><a href="#trades">Div 05 — Metals</a></li>
+            <li><a href="#trades">Div 21-28 — MEP</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <div class="footer-contact-row"><span class="icon">📍</span><div>Wall Street Financial District<br />New York, NY 10005</div></div>
+          <div class="footer-contact-row"><span class="icon">📞</span><div><a href="tel:+18005550199" style="color:#f87171">+1 (800) 555-0199</a></div></div>
+          <div class="footer-contact-row"><span class="icon">✉️</span><div>info@usestimatespro.com</div></div>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-inner">
+          <div>© 2024 US Estimates Pro (usestimatespro.com). All rights reserved.</div>
+          <div style="display:flex;gap:20px;">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const words = ["You Build.", "You Win Bids.", "You Scale.", "We Deliver."];
+    let idx = 0;
+    setInterval(() => {
+      idx = (idx + 1) % words.length;
+      document.getElementById('dynamicWord').innerText = words[idx];
+    }, 2800);
+  </script>
+</body>
+</html>
+
