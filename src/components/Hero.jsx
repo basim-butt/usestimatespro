@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0)
+  const videoRef = useRef(null)
   const dynamicWords = ['You Win.', 'You Scale.', 'You Profit.']
 
   useEffect(() => {
@@ -10,6 +11,16 @@ export default function Hero() {
     }, 2400)
     return () => clearInterval(interval)
   }, [dynamicWords.length])
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true
+      videoRef.current.muted = true
+      videoRef.current.play().catch(() => {
+        // Handled silently if mobile battery-saver prevents autoplay
+      })
+    }
+  }, [])
 
   const scrollTo = (id) => {
     const el = document.getElementById(id)
@@ -24,11 +35,14 @@ export default function Hero() {
       {/* Background Video */}
       <div className="video-background-wrapper">
         <video
+          ref={videoRef}
           className="hero-video"
           autoPlay
           muted
           loop
           playsInline
+          webkit-playsinline="true"
+          preload="auto"
           poster="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1920&q=80"
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
