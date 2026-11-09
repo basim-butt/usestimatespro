@@ -43,7 +43,6 @@ export function BrandLogo() {
         </clipPath>
 
         <g clipPath="url(#shieldClip)">
-          {/* Alternating Red and White angled stripes */}
           <rect x="25" y="0" width="30" height="4.5" fill="url(#redGrad)" transform="rotate(8 25 0)" />
           <rect x="25" y="8" width="30" height="4.5" fill="#ffffff" transform="rotate(8 25 8)" />
           <rect x="25" y="16" width="30" height="4.5" fill="url(#redGrad)" transform="rotate(8 25 16)" />
@@ -54,7 +53,7 @@ export function BrandLogo() {
         {/* Left Field Divider (Gold Blueprint line) */}
         <path d="M25 3L25 43" stroke="#f59e0b" strokeWidth="1.5" strokeDasharray="2 1.5" />
 
-        {/* Blue Canton with Precision Star & Construction Compass Chevron */}
+        {/* Blue Canton with Precision Compass */}
         <path
           d="M14 14L19 23H9L14 14Z"
           fill="none"
@@ -89,7 +88,7 @@ export function BrandLogo() {
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [activeItem, setActiveItem] = useState('Overview')
+  const [activeItem, setActiveItem] = useState('Services')
 
   const scrollTo = (id, label) => {
     setActiveItem(label)
@@ -101,34 +100,32 @@ export default function Navbar() {
     setMobileOpen(false)
   }
 
-  // Refined, distinct navigation labels (not direct replicas of usestimation)
+  // Exactly 5 clean, essential, high-priority navigation items
   const navItems = [
-    { label: 'Overview', id: 'hero' },
-    { label: 'Why Us', id: 'why-us' },
     { label: 'Services', id: 'services' },
-    { label: 'Takeoff Calculator', id: 'quick-estimator', isBadge: true },
     { label: 'Trades Covered', id: 'trades' },
-    { label: 'Workflow', id: 'process' },
+    { label: 'How It Works', id: 'process' },
+    { label: 'Why Us', id: 'why-us' },
     { label: 'Contact', id: 'quote' },
   ]
 
   return (
     <header className="header-wrapper">
-      {/* Top Banner Bar */}
+      {/* Top Notification Bar */}
       <div className="topbar">
         <div className="container">
           <div className="topbar-inner">
             <div className="topbar-left">
               <span className="topbar-item highlight-item">
-                <span className="star-icon">★</span> Serving General Contractors & Subs Nationwide
+                <span className="star-icon">★</span> Serving Contractors Nationwide Across All 50 States
               </span>
               <span className="topbar-divider">•</span>
               <span className="topbar-item">
                 Regional Hubs: <strong>Austin, TX</strong> & <strong>New York, NY</strong>
               </span>
               <span className="topbar-divider">•</span>
-              <span className="topbar-item time-badge">
-                Mon–Sat, 6:30am–8:00pm EST
+              <span className="topbar-item">
+                Mon–Sat: 6:30am–8:00pm EST
               </span>
             </div>
 
@@ -150,7 +147,7 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="container">
           <div className="nav-inner">
-            {/* Unique Redesigned Logo */}
+            {/* Logo */}
             <div
               className="logo-clickable"
               onClick={() => scrollTo('hero', 'Overview')}
@@ -160,7 +157,7 @@ export default function Navbar() {
               <BrandLogo />
             </div>
 
-            {/* Menu Links with Distinct Wordings */}
+            {/* Exactly 5 Essential Menu Links */}
             <ul className="nav-menu">
               {navItems.map((item) => (
                 <li key={item.label}>
@@ -173,13 +170,12 @@ export default function Navbar() {
                     }}
                   >
                     {item.label}
-                    {item.isBadge && <span className="nav-pill-new">TOOL</span>}
                   </a>
                 </li>
               ))}
             </ul>
 
-            {/* Redesigned Action Area */}
+            {/* Action Button */}
             <div className="nav-actions">
               <button
                 className="btn btn-red btn-header-cta"
@@ -203,10 +199,10 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Dual Red & Navy Architectural Border */}
+      {/* Modern Accent Border */}
       <div className="header-stripes-modern" />
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu */}
       <div className={`mobile-drawer ${mobileOpen ? 'open' : ''}`}>
         <ul>
           {navItems.map((item) => (
@@ -226,7 +222,7 @@ export default function Navbar() {
         </ul>
         <button
           className="btn btn-red"
-          style={{ width: '100%', marginTop: '12px' }}
+          style={{ width: '100%', marginTop: '14px' }}
           onClick={() => scrollTo('quote', 'Contact')}
         >
           Submit Plans Now (1-Hr Quote) →
