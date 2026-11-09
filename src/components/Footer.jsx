@@ -72,9 +72,8 @@ export default function Footer() {
             <div className="footer-contact-row">
               <span className="icon">📍</span>
               <div>
-                <strong>National Headquarters:</strong><br />
-                Financial District, New York, NY 10005<br />
-                <span style={{ color: '#94a3b8', fontSize: '0.82rem' }}>Operations Hub: Austin, TX</span>
+                <strong>Headquarters:</strong><br />
+                Financial District, New York, NY 10005
               </div>
             </div>
             <div className="footer-contact-row">
@@ -99,8 +98,7 @@ export default function Footer() {
               <span className="icon">🕒</span>
               <div>
                 <strong>Hours:</strong><br />
-                Mon–Sat: 6:30 AM – 8:00 PM EST<br />
-                Emergency Weekend Bid Support On Demand
+                Monday – Friday: 9:00 AM – 5:00 PM EST
               </div>
             </div>
           </div>

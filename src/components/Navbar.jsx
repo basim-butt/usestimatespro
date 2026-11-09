@@ -121,11 +121,11 @@ export default function Navbar() {
               </span>
               <span className="topbar-divider">•</span>
               <span className="topbar-item">
-                Regional Hubs: <strong>Austin, TX</strong> & <strong>New York, NY</strong>
+                Headquarters: <strong>New York, NY</strong>
               </span>
               <span className="topbar-divider">•</span>
               <span className="topbar-item">
-                Mon–Sat: 6:30am–8:00pm EST
+                Mon–Fri: 9:00am–5:00pm EST
               </span>
             </div>
 

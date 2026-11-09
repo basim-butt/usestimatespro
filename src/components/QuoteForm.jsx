@@ -84,7 +84,7 @@ export default function QuoteForm() {
                 📞 (800) 555-0199
               </a>
               <div style={{ color: '#94a3b8', fontSize: '0.8rem', marginTop: '4px' }}>
-                Senior Estimators on call Mon–Fri, 7am–7pm EST
+                Senior Estimators on call Mon–Fri, 9:00am–5:00pm EST
               </div>
             </div>
           </div>
