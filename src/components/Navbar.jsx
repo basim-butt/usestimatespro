@@ -134,8 +134,8 @@ export default function Navbar() {
                 <span>📞</span> (800) 555-0199
               </a>
               <span className="topbar-divider">|</span>
-              <a href="mailto:bids@usestimatespro.com" className="topbar-link">
-                <span>✉️</span> bids@usestimatespro.com
+              <a href="mailto:info@usestimatespro.com" className="topbar-link">
+                <span>✉️</span> info@usestimatespro.com
               </a>
             </div>
           </div>

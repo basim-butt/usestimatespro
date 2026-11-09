@@ -88,9 +88,8 @@ export default function Footer() {
             <div className="footer-contact-row">
               <span className="icon">✉️</span>
               <div>
-                <strong>Plan Submission Email:</strong><br />
-                <a href="mailto:bids@usestimatespro.com" style={{ color: '#e2e8f0' }}>
-                  bids@usestimatespro.com
+                <a href="mailto:info@usestimatespro.com" style={{ color: '#e2e8f0' }}>
+                  info@usestimatespro.com
                 </a>
               </div>
             </div>
