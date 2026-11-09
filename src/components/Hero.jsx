@@ -31,10 +31,7 @@ export default function Hero() {
           playsInline
           poster="https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&w=1920&q=80"
         >
-          <source
-            src="https://assets.mixkit.co/videos/preview/mixkit-set-of-craters-working-in-a-construction-site-4266-large.mp4"
-            type="video/mp4"
-          />
+          <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
         <div className="video-overlay" />
         <div className="hero-grid-pattern" />
