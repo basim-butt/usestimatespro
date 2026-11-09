@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 46" fill="none">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="54" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f274a" />
+      <stop offset="100%" stop-color="#081426" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="30" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+    <clipPath id="shieldClip">
+      <path d="M27 2L50 9V24C50 34.5 39 40.5 27 43.5C15 40.5 4 34.5 4 24V9L27 2Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Base Shield -->
+  <path
+    d="M27 2L50 9V24C50 34.5 39 40.5 27 43.5C15 40.5 4 34.5 4 24V9L27 2Z"
+    fill="url(#shieldGrad)"
+    stroke="#1e3a63"
+    stroke-width="1.8"
+  />
+
+  <!-- Red & White Stripes -->
+  <g clip-path="url(#shieldClip)">
+    <rect x="25" y="0" width="32" height="4.5" fill="url(#redGrad)" transform="rotate(8 25 0)" />
+    <rect x="25" y="8" width="32" height="4.5" fill="#ffffff" transform="rotate(8 25 8)" />
+    <rect x="25" y="16" width="32" height="4.5" fill="url(#redGrad)" transform="rotate(8 25 16)" />
+    <rect x="25" y="24" width="32" height="4.5" fill="#ffffff" transform="rotate(8 25 24)" />
+    <rect x="25" y="32" width="32" height="5" fill="url(#redGrad)" transform="rotate(8 25 32)" />
+  </g>
+
+  <!-- Gold Plumb-line Divider -->
+  <path d="M25 3L25 43" stroke="#f59e0b" stroke-width="1.6" stroke-dasharray="2 1.5" />
+
+  <!-- White Compass / Drafting Triangle -->
+  <path
+    d="M14 14L19 23H9L14 14Z"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="14" cy="23" r="1.5" fill="#f59e0b" />
+
+  <!-- Gold Top Star -->
+  <polygon
+    points="14,6 15.3,9.5 19,9.5 16,11.8 17.2,15.2 14,13 10.8,15.2 12,11.8 9,9.5 12.7,9.5"
+    fill="#f59e0b"
+  />
+</svg>
