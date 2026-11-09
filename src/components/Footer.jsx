@@ -66,7 +66,8 @@ export default function Footer() {
               <span className="icon">📍</span>
               <div>
                 <strong>Headquarters:</strong><br />
-                Financial District, New York, NY 10005
+                244 5th Avenue, Suite B-102<br />
+                New York, NY 10001
               </div>
             </div>
             <div className="footer-contact-row">
