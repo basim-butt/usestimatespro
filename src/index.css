@@ -1603,7 +1603,7 @@ button {
 
   /* ── Mobile Hero Video & Layout Optimizations ── */
   .hero-video-section {
-    min-height: 88svh;
+    min-height: 85svh;
   }
   .hero-video {
     width: 100%;
@@ -1612,19 +1612,19 @@ button {
     left: 0;
     transform: none;
     object-fit: cover;
-    object-position: center 25%;
-    filter: brightness(0.65) contrast(1.15);
+    object-position: center 32%;
+    filter: brightness(0.78) contrast(1.12);
   }
   .video-overlay {
     background: linear-gradient(
       180deg,
-      rgba(11, 26, 48, 0.82) 0%,
-      rgba(11, 26, 48, 0.55) 50%,
-      rgba(7, 17, 30, 0.92) 100%
+      rgba(11, 26, 48, 0.68) 0%,
+      rgba(11, 26, 48, 0.42) 45%,
+      rgba(7, 17, 30, 0.85) 100%
     );
   }
   .hero-content-container {
-    padding: 42px 0 36px;
+    padding: 38px 0 32px;
   }
   .hero-content {
     text-align: center;
@@ -1634,21 +1634,24 @@ button {
     font-size: clamp(1.85rem, 6vw, 2.3rem);
     line-height: 1.18;
     margin-bottom: 8px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
   }
   .hero-subtagline {
     font-size: 1.15rem;
     margin-bottom: 14px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   }
   .hero-description {
     font-size: 0.92rem;
     line-height: 1.55;
     margin-bottom: 22px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
   }
   .hero-cta-group {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
   .hero-cta-group .btn {
     width: 100%;
@@ -1663,6 +1666,9 @@ button {
   }
   .hero-stat-card {
     padding: 12px 8px;
+    background: rgba(15, 39, 74, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
   .hero-stat-number {
     font-size: 1.45rem;
