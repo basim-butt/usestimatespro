@@ -64,7 +64,7 @@ export default function Hero() {
 
           <div className="hero-cta-group">
             <button className="btn btn-red btn-lg" onClick={() => scrollTo('quote')}>
-              Submit Plans Now →
+              Get a Quote →
             </button>
             <button className="btn btn-outline-white btn-lg" onClick={() => scrollTo('trades')}>
               View Core Trade Scopes

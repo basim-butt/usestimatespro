@@ -176,7 +176,7 @@ export default function Navbar() {
                 className="btn btn-red btn-header-cta"
                 onClick={() => scrollTo('quote', 'Contact')}
               >
-                <span>Submit Plans Now</span>
+                <span>Get a Quote</span>
                 <span className="cta-arrow">→</span>
               </button>
 
@@ -220,7 +220,7 @@ export default function Navbar() {
           style={{ width: '100%', marginTop: '14px' }}
           onClick={() => scrollTo('quote', 'Contact')}
         >
-          Submit Plans Now (1-Hr Quote) →
+          Get a Quote →
         </button>
       </div>
     </header>
