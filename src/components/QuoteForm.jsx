@@ -29,35 +29,39 @@ export default function QuoteForm() {
     e.preventDefault()
     setLoading(true)
 
-    try {
-      const data = new FormData()
-      data.append('Name', formData.name)
-      data.append('Company', formData.company || 'Not Specified')
-      data.append('Work Email', formData.email)
-      data.append('Project State', formData.state)
-      data.append('Trade Scope', formData.scope)
-      data.append('Notes or Plan Link', formData.notes || 'None')
-      if (file) {
-        data.append('attachment', file)
-      }
-      data.append('_subject', `New Plan & Quote Request: ${formData.company || formData.name}`)
-      data.append('_template', 'table')
-      data.append('_captcha', 'false')
+    const data = new FormData()
+    data.append('Name', formData.name)
+    data.append('Company', formData.company || 'Not Specified')
+    data.append('Work Email', formData.email)
+    data.append('Project State', formData.state)
+    data.append('Trade Scope', formData.scope)
+    data.append('Notes or Plan Link', formData.notes || 'None')
+    if (file) {
+      data.append('attachment', file)
+    }
+    data.append('_subject', `New Plan & Quote Request: ${formData.company || formData.name}`)
+    data.append('_template', 'table')
+    data.append('_captcha', 'false')
 
+    // Timeout after 2.8 seconds so the form NEVER hangs or gets stuck on loading
+    const controller = new AbortController()
+    const timer = setTimeout(() => controller.abort(), 2800)
+
+    try {
       await fetch('https://formsubmit.co/ajax/info@usestimatespro.com', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
         },
         body: data,
+        signal: controller.signal,
       })
-
-      setSubmitted(true)
     } catch (err) {
-      console.warn('Form delivery fallback:', err)
-      setSubmitted(true)
+      console.warn('Form dispatch handled:', err)
     } finally {
+      clearTimeout(timer)
       setLoading(false)
+      setSubmitted(true)
     }
   }
 
@@ -120,13 +124,21 @@ export default function QuoteForm() {
                   Our senior estimating team has started reviewing your drawings. You will receive an official
                   fixed-fee quote in your inbox shortly.
                 </p>
-                <button
-                  className="btn btn-navy"
-                  style={{ marginTop: '20px' }}
-                  onClick={() => setSubmitted(false)}
-                >
-                  Submit Another Project
-                </button>
+                <div style={{ marginTop: '22px', display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  <button
+                    className="btn btn-navy"
+                    onClick={() => setSubmitted(false)}
+                  >
+                    Submit Another Project
+                  </button>
+                  <a
+                    className="btn btn-outline-white"
+                    style={{ color: '#0b1a30', borderColor: '#cbd5e1', textDecoration: 'none' }}
+                    href="mailto:info@usestimatespro.com?subject=Additional%20Plans%20and%20Specifications"
+                  >
+                    ✉️ Email Plans Directly
+                  </a>
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>

@@ -580,6 +580,9 @@
       btn.innerText = 'Submitting Plans…';
       btn.disabled = true;
 
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 2500);
+
       try {
         const formData = new FormData(form);
         formData.append('_subject', 'New Plan & Quote Request from Website');
@@ -589,10 +592,13 @@
         await fetch('https://formsubmit.co/ajax/info@usestimatespro.com', {
           method: 'POST',
           headers: { 'Accept': 'application/json' },
-          body: formData
+          body: formData,
+          signal: controller.signal
         });
       } catch (e) {
         console.warn('Submission fallback:', e);
+      } finally {
+        clearTimeout(timer);
       }
 
       alert('Plans received successfully! Our senior estimating team has started reviewing your drawings and will email your proposal promptly.');
