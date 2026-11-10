@@ -587,6 +587,12 @@ button {
   object-fit: cover;
   object-position: center 35%;
   filter: brightness(0.72) contrast(1.1);
+  opacity: 0;
+  transition: opacity 0.45s ease-out;
+}
+
+.hero-video.loaded {
+  opacity: 1;
 }
 
 /* Video Overlay with warm sunset / contractor atmosphere */
