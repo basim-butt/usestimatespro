@@ -49,7 +49,7 @@ export default function QuickEstimator() {
             </select>
 
             <button className="btn btn-red" onClick={scrollToQuote}>
-              Get Fixed Price Quote →
+              Get a Quote →
             </button>
           </div>
         </div>
