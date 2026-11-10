@@ -564,7 +564,7 @@ button {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color: var(--navy-darkest);
+  background-color: #000000;
 }
 
 .video-background-wrapper {
@@ -576,6 +576,7 @@ button {
   overflow: hidden;
   z-index: 1;
   pointer-events: none;
+  background-color: #000000;
 }
 
 .hero-video {
@@ -586,24 +587,19 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center 35%;
-  filter: brightness(0.72) contrast(1.1);
-  opacity: 0;
-  transition: opacity 0.45s ease-out;
-}
-
-.hero-video.loaded {
+  filter: brightness(0.78) contrast(1.08);
   opacity: 1;
 }
 
-/* Video Overlay with warm sunset / contractor atmosphere */
+/* Video Overlay - neutral dark scrim for text readability (no blue tint) */
 .video-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(11, 26, 48, 0.78) 0%,
-    rgba(11, 26, 48, 0.45) 50%,
-    rgba(7, 17, 30, 0.88) 100%
+    rgba(0, 0, 0, 0.52) 0%,
+    rgba(0, 0, 0, 0.28) 50%,
+    rgba(0, 0, 0, 0.72) 100%
   );
   z-index: 2;
 }
@@ -1624,9 +1620,9 @@ button {
   .video-overlay {
     background: linear-gradient(
       180deg,
-      rgba(11, 26, 48, 0.68) 0%,
-      rgba(11, 26, 48, 0.42) 45%,
-      rgba(7, 17, 30, 0.85) 100%
+      rgba(0, 0, 0, 0.58) 0%,
+      rgba(0, 0, 0, 0.32) 45%,
+      rgba(0, 0, 0, 0.75) 100%
     );
   }
   .hero-content-container {

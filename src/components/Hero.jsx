@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react'
 
 export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0)
-  const [videoLoaded, setVideoLoaded] = useState(false)
   const videoRef = useRef(null)
   const dynamicWords = ['You Win.', 'You Scale.', 'You Profit.']
 
@@ -17,14 +16,7 @@ export default function Hero() {
     if (videoRef.current) {
       videoRef.current.defaultMuted = true
       videoRef.current.muted = true
-      if (videoRef.current.readyState >= 2) {
-        setVideoLoaded(true)
-      }
-      videoRef.current.play().then(() => {
-        setVideoLoaded(true)
-      }).catch(() => {
-        // Handled silently if mobile battery-saver prevents autoplay
-      })
+      videoRef.current.play().catch(() => {})
     }
   }, [])
 
@@ -42,15 +34,13 @@ export default function Hero() {
       <div className="video-background-wrapper">
         <video
           ref={videoRef}
-          className={`hero-video ${videoLoaded ? 'loaded' : ''}`}
+          className="hero-video"
           autoPlay
           muted
           loop
           playsInline
           webkit-playsinline="true"
           preload="auto"
-          onLoadedData={() => setVideoLoaded(true)}
-          onPlaying={() => setVideoLoaded(true)}
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
