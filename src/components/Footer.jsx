@@ -61,7 +61,7 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h4 className="footer-col-title">Direct Offices</h4>
+            <h4 className="footer-col-title">GET IN TOUCH</h4>
             <div className="footer-contact-row">
               <span className="icon">📍</span>
               <div>
