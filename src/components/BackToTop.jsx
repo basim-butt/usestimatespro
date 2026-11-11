@@ -21,13 +21,14 @@ export default function BackToTop() {
     <button
       onClick={scrollToTop}
       aria-label="Back to Top"
+      className="back-to-top-btn"
       style={{
         position: 'fixed',
-        bottom: '28px',
-        right: '28px',
+        bottom: '24px',
+        right: '20px',
         zIndex: 999,
-        width: '46px',
-        height: '46px',
+        width: '42px',
+        height: '42px',
         borderRadius: '4px',
         backgroundColor: '#dc2626',
         color: '#ffffff',

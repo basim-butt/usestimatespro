@@ -52,6 +52,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -60,7 +62,15 @@ body {
   color: var(--text-body);
   line-height: 1.65;
   overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
   -webkit-font-smoothing: antialiased;
+}
+
+.site-wrapper {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 a {
@@ -2781,14 +2791,18 @@ button {
 }
 
 @media (max-width: 768px) {
+  .subpage-wrapper {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
   .subpage-hero {
-    padding: 40px 0 50px;
+    padding: 36px 0 44px;
   }
   .subpage-hero-title {
-    font-size: 1.7rem;
+    font-size: 1.65rem;
   }
   .service-detail-card {
-    padding: 24px 20px;
+    padding: 20px 16px;
   }
   .service-detail-header {
     flex-direction: column;
@@ -2796,12 +2810,47 @@ button {
   }
   .workflow-step-card {
     flex-direction: column;
-    padding: 24px 20px;
+    padding: 20px 16px;
     gap: 16px;
   }
   .workflow-step-num-col {
     flex-direction: row;
     width: auto;
+  }
+  .quote-form-card {
+    padding: 24px 16px;
+  }
+  .calculator-widget-box {
+    padding: 24px 16px;
+  }
+  .calculator-result-panel {
+    padding: 20px 16px;
+  }
+  .pillar-card {
+    padding: 24px 18px;
+  }
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .trade-scope-card {
+    padding: 22px 18px;
+  }
+  .trades-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .specs-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+  }
+  .specs-table th,
+  .specs-table td {
+    padding: 12px 12px;
+    font-size: 0.84rem;
+  }
+  .cta-banner-box {
+    padding: 30px 18px;
   }
   .cta-banner-buttons {
     flex-direction: column;
@@ -2811,7 +2860,33 @@ button {
     width: 100%;
     text-align: center;
   }
-  .trades-cards-grid {
-    grid-template-columns: 1fr;
+  .back-to-top-btn {
+    right: 14px !important;
+    bottom: 16px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  .quote-form-card {
+    padding: 20px 12px;
+  }
+  .form-control {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  .cta-banner-box {
+    padding: 26px 14px;
+  }
+  .contact-info-card {
+    padding: 18px 14px;
+  }
+  .submission-guidelines-box {
+    padding: 20px 14px;
   }
 }
