@@ -1,28 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { BrandLogo } from './Navbar'
 
 export default function Footer() {
-  const scrollTo = (id) => {
-    const el = document.getElementById(id)
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 85
-      window.scrollTo({ top, behavior: 'smooth' })
-    }
-  }
-
   return (
     <footer className="main-footer" id="contact">
       <div className="container">
         <div className="footer-top-grid">
           {/* Brand Info */}
           <div className="footer-brand-col">
-            <div
+            <Link
+              to="/"
               className="logo-clickable"
-              onClick={() => scrollTo('hero')}
-              style={{ cursor: 'pointer', display: 'inline-block' }}
+              style={{ display: 'inline-block', textDecoration: 'none' }}
             >
               <BrandLogo />
-            </div>
+            </Link>
 
             <p className="footer-about-text">
               US Estimates Pro is an independent American construction estimating consultancy.
@@ -35,13 +28,13 @@ export default function Footer() {
           <div>
             <h4 className="footer-col-title">Explore</h4>
             <ul className="footer-links-list">
-              <li><a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo('hero') }}>Overview</a></li>
-              <li><a href="#why-us" onClick={(e) => { e.preventDefault(); scrollTo('why-us') }}>Why Choose Us</a></li>
-              <li><a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }}>Estimating Services</a></li>
-              <li><a href="#quick-estimator" onClick={(e) => { e.preventDefault(); scrollTo('quick-estimator') }}>Takeoff Calculator</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Trades Covered</a></li>
-              <li><a href="#process" onClick={(e) => { e.preventDefault(); scrollTo('process') }}>Our Workflow</a></li>
-              <li><a href="#quote" onClick={(e) => { e.preventDefault(); scrollTo('quote') }}>Submit Plans</a></li>
+              <li><Link to="/">Overview</Link></li>
+              <li><Link to="/why-us">Why Choose Us</Link></li>
+              <li><Link to="/services">Estimating Services</Link></li>
+              <li><Link to="/takeoff-calculator">Takeoff Calculator</Link></li>
+              <li><Link to="/trades">Trades Covered</Link></li>
+              <li><Link to="/how-it-works">Our Workflow</Link></li>
+              <li><Link to="/contact">Submit Plans</Link></li>
             </ul>
           </div>
 
@@ -49,13 +42,13 @@ export default function Footer() {
           <div>
             <h4 className="footer-col-title">Trade Scopes</h4>
             <ul className="footer-links-list">
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 03 — Concrete & Slabs</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 04 — Masonry & Stone</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 05 — Structural Steel</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 06 — Framing & Timber</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Division 09 — Drywall & Finishes</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Divisions 21–28 — Full MEP Packages</a></li>
-              <li><a href="#trades" onClick={(e) => { e.preventDefault(); scrollTo('trades') }}>Divisions 31–33 — Site & Civil Works</a></li>
+              <li><Link to="/trades#concrete">Division 03 — Concrete & Slabs</Link></li>
+              <li><Link to="/trades#masonry">Division 04 — Masonry & Stone</Link></li>
+              <li><Link to="/trades#metals">Division 05 — Structural Steel</Link></li>
+              <li><Link to="/trades#woods">Division 06 — Framing & Timber</Link></li>
+              <li><Link to="/trades#finishes">Division 09 — Drywall & Finishes</Link></li>
+              <li><Link to="/trades#mep">Divisions 21–28 — Full MEP Packages</Link></li>
+              <li><Link to="/trades#civil">Divisions 31–33 — Site & Civil Works</Link></li>
             </ul>
           </div>
 
