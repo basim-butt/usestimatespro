@@ -2642,6 +2642,19 @@ button {
   background: transparent;
 }
 
+.contact-form-section .quote-left-info h3 {
+  color: var(--navy-darkest);
+}
+
+.contact-form-section .quote-left-info p {
+  color: var(--text-body);
+}
+
+.contact-form-section .quote-bullet-item {
+  color: var(--navy-dark);
+  font-weight: 600;
+}
+
 /* Submission Guidelines & NDA Box */
 .submission-guidelines-box {
   background: var(--white);
