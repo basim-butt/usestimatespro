@@ -325,7 +325,7 @@ export default function TradesPage() {
           <div className="cta-banner-box">
             <div className="cta-banner-text">
               <h2>Need a Trade-Specific Estimate on a Tight Deadline?</h2>
-              <p>Send us your drawing set or scope sheet. We'll examine the plans and reply with a confirmed turnaround time and fixed price quote.</p>
+              <p>Send us your drawing set or scope sheet. We'll examine the plans and reply with a confirmed turnaround time and customized quote.</p>
             </div>
             <div className="cta-banner-buttons">
               <Link to="/contact" className="btn btn-red btn-lg">

@@ -6,7 +6,7 @@ export default function WhyUs() {
     { feature: 'Senior Human Review', us: '100% Guaranteed', inhouse: 'Dependent on staff', freelance: 'Rarely checked' },
     { feature: 'Software Licensing Costs', us: '$0 (We handle it)', inhouse: '$15,000+/yr', freelance: '$0' },
     { feature: 'RSMeans Regional Rates', us: 'All 50 States', inhouse: 'Manual research', freelance: 'Outdated rates' },
-    { feature: 'Fixed Fee Guarantee', us: 'Upfront in 1 Hour', inhouse: 'High overhead', freelance: 'Hourly overruns' },
+    { feature: 'Upfront Quote Guarantee', us: 'Upfront in 1 Hour', inhouse: 'High overhead', freelance: 'Hourly overruns' },
     { feature: 'Deliverable Formats', us: 'Excel + Markups + PDF', inhouse: 'Varies', freelance: 'Often messy' },
   ]
 

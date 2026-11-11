@@ -18,13 +18,13 @@ export default function HowItWorksPage() {
     },
     {
       step: '02',
-      title: 'Scope Review & Guaranteed Fixed Quote',
+      title: 'Scope Review & Guaranteed Custom Proposal',
       subtitle: 'Receive a transparent proposal within 1 to 2 hours of review',
-      description: 'A certified senior estimator performs an immediate sheet count and complexity assessment. We formulate a guaranteed, fixed-price fee with zero hidden charges and commit to an exact delivery date prior to your bid deadline.',
+      description: 'A certified senior estimator performs an immediate sheet count and complexity assessment. We formulate a guaranteed, transparent quote with zero hidden charges and commit to an exact delivery date prior to your bid deadline.',
       details: [
         'Detailed scope confirmation letter outlining exact CSI divisions covered',
         'Guaranteed turnaround commitment (typically 24 to 48 hours for standard projects)',
-        'Transparent fixed pricing — never any unexpected hourly billing or surcharges',
+        'Transparent upfront pricing — never any unexpected hourly billing or surcharges',
         'Direct estimator contact assigned to answer technical inquiries',
       ],
       timeframe: 'Within 60–120 Minutes',
@@ -214,7 +214,7 @@ export default function HowItWorksPage() {
           <div className="cta-banner-box">
             <div className="cta-banner-text">
               <h2>Have an Upcoming Bid Date?</h2>
-              <p>Send your drawings over right now. We'll examine the plan set and provide a guaranteed delivery timeline and fixed proposal.</p>
+              <p>Send your drawings over right now. We'll examine the plan set and provide a guaranteed delivery timeline and custom proposal.</p>
             </div>
             <div className="cta-banner-buttons">
               <Link to="/contact" className="btn btn-red btn-lg">

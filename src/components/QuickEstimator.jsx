@@ -18,7 +18,7 @@ export default function QuickEstimator() {
         <div className="tool-bar-inner">
           <div className="tool-bar-heading">
             <h3>⚡ Instant Scope Estimator & Plan Review</h3>
-            <p>Select your project details for an immediate turnaround estimate & fee proposal.</p>
+            <p>Select your project details for an immediate turnaround estimate & custom proposal.</p>
           </div>
 
           <div className="tool-bar-inputs">

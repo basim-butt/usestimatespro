@@ -80,17 +80,17 @@ export default function QuoteForm() {
           <div className="quote-left-info">
             <div className="section-tag navy">Fast & Transparent</div>
             <h3>
-              Submit Your Plans & Receive A Fast Fixed Fee Proposal
+              Submit Your Plans & Receive A Fast Bid Proposal
             </h3>
             <p>
               Upload your drawings or paste your plan room link. Our senior estimators will review
-              your scope immediately and provide a guaranteed flat-rate price before any work begins.
+              your scope immediately and provide a transparent custom price before any work begins.
             </p>
 
             <div className="quote-bullets">
               <div className="quote-bullet-item">
                 <span className="icon">✓</span>
-                <span>Guaranteed fixed flat fee — no surprise hourly invoices</span>
+                <span>Transparent upfront proposal — no surprise hourly invoices</span>
               </div>
               <div className="quote-bullet-item">
                 <span className="icon">✓</span>
@@ -122,7 +122,7 @@ export default function QuoteForm() {
                 </h3>
                 <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: 1.6 }}>
                   Our senior estimating team has started reviewing your drawings. You will receive an official
-                  fixed-fee quote in your inbox shortly.
+                  custom quote in your inbox shortly.
                 </p>
                 <div style={{ marginTop: '22px', display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap' }}>
                   <button

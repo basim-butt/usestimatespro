@@ -9,8 +9,8 @@ export default function HowItWorks() {
     },
     {
       num: '02',
-      title: 'Receive Fast Fixed Quote',
-      desc: 'Our senior review team analyzes the project scope and delivers a transparent, fixed-fee quote with zero obligation.',
+      title: 'Receive Fast Custom Quote',
+      desc: 'Our senior review team analyzes the project scope and delivers a transparent, itemized quote with zero obligation.',
     },
     {
       num: '03',

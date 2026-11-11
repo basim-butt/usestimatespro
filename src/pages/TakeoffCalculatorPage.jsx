@@ -167,7 +167,7 @@ export default function TakeoffCalculatorPage() {
           <div className="cta-banner-box">
             <div className="cta-banner-text">
               <h2>Need an Exact, Line-Item Blueprint Takeoff?</h2>
-              <p>Skip the rough estimates. Upload your drawings today and receive a detailed, fixed-price proposal within 1–2 hours.</p>
+              <p>Skip the rough estimates. Upload your drawings today and receive a detailed custom proposal within 1–2 hours.</p>
             </div>
             <div className="cta-banner-buttons">
               <Link to="/contact" className="btn btn-red btn-lg">

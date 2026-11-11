@@ -237,7 +237,7 @@ export default function ServicesPage() {
           <div className="cta-banner-box">
             <div className="cta-banner-text">
               <h2>Ready to Bid With Total Confidence?</h2>
-              <p>Upload your architectural blueprints today and receive a detailed, fixed-price quote and scope breakdown within 1 to 2 hours.</p>
+              <p>Upload your architectural blueprints today and receive a detailed quote and scope breakdown within 1 to 2 hours.</p>
             </div>
             <div className="cta-banner-buttons">
               <Link to="/contact" className="btn btn-red btn-lg">
