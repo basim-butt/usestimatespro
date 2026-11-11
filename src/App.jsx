@@ -12,6 +12,8 @@ import HowItWorksPage from './pages/HowItWorksPage'
 import WhyUsPage from './pages/WhyUsPage'
 import TakeoffCalculatorPage from './pages/TakeoffCalculatorPage'
 import ContactPage from './pages/ContactPage'
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
+import TermsPage from './pages/TermsPage'
 
 export default function App() {
   return (
@@ -28,6 +30,8 @@ export default function App() {
           <Route path="/takeoff-calculator" element={<TakeoffCalculatorPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/quote" element={<ContactPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
           <Route path="*" element={<Home />} />
         </Routes>
         <Footer />

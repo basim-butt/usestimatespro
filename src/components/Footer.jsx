@@ -88,9 +88,8 @@ export default function Footer() {
               © {new Date().getFullYear()} <strong>US Estimates Pro</strong>. All rights reserved.
             </div>
             <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms & Bid Standards</a>
-              <a href="#">Client Portal</a>
+              <Link to="/privacy-policy">Privacy Policy</Link>
+              <Link to="/terms">Terms &amp; Bid Standards</Link>
             </div>
           </div>
         </div>
