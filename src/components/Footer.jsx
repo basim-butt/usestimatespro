@@ -22,33 +22,40 @@ export default function Footer() {
               We supply General Contractors, Developers, and Subcontractors with verifiable,
               CSI-compliant quantity takeoffs and regional cost models across all 50 states.
             </p>
+
+            <div style={{ marginTop: '12px', fontSize: '0.84rem', color: '#cbd5e1' }}>
+              <strong>Regional Hub:</strong>{' '}
+              <Link to="/locations/new-york" style={{ color: '#fca5a5', textDecoration: 'underline' }}>
+                New York &amp; NYC Estimating Desk →
+              </Link>
+            </div>
           </div>
 
-          {/* Quick Navigation */}
+          {/* Core Services Navigation */}
           <div>
-            <h4 className="footer-col-title">Explore</h4>
+            <h4 className="footer-col-title">Services</h4>
             <ul className="footer-links-list">
-              <li><Link to="/">Overview</Link></li>
-              <li><Link to="/why-us">Why Choose Us</Link></li>
-              <li><Link to="/services">Estimating Services</Link></li>
+              <li><Link to="/services/quantity-takeoffs">Quantity Takeoff Services</Link></li>
+              <li><Link to="/services/rsmeans-cost-estimating">RSMeans Cost Estimating</Link></li>
+              <li><Link to="/services/bid-package-preparation">Bid Package Preparation</Link></li>
+              <li><Link to="/services/value-engineering">Value Engineering</Link></li>
               <li><Link to="/takeoff-calculator">Takeoff Calculator</Link></li>
-              <li><Link to="/trades">Trades Covered</Link></li>
-              <li><Link to="/how-it-works">Our Workflow</Link></li>
-              <li><Link to="/contact">Submit Plans</Link></li>
+              <li><Link to="/how-it-works">Our 3-Step Process</Link></li>
+              <li><Link to="/blog">Contractor Guides</Link></li>
             </ul>
           </div>
 
-          {/* Core CSI Divisions */}
+          {/* Dedicated Trade Divisions */}
           <div>
-            <h4 className="footer-col-title">Trade Scopes</h4>
+            <h4 className="footer-col-title">Trade Takeoffs</h4>
             <ul className="footer-links-list">
-              <li><Link to="/trades#concrete">Division 03 — Concrete & Slabs</Link></li>
-              <li><Link to="/trades#masonry">Division 04 — Masonry & Stone</Link></li>
-              <li><Link to="/trades#metals">Division 05 — Structural Steel</Link></li>
-              <li><Link to="/trades#woods">Division 06 — Framing & Timber</Link></li>
-              <li><Link to="/trades#finishes">Division 09 — Drywall & Finishes</Link></li>
-              <li><Link to="/trades#mep">Divisions 21–28 — Full MEP Packages</Link></li>
-              <li><Link to="/trades#civil">Divisions 31–33 — Site & Civil Works</Link></li>
+              <li><Link to="/trades/concrete-estimating">Division 03 — Concrete &amp; Slabs</Link></li>
+              <li><Link to="/trades/masonry-estimating">Division 04 — Masonry &amp; Stone</Link></li>
+              <li><Link to="/trades/structural-steel-estimating">Division 05 — Structural Steel</Link></li>
+              <li><Link to="/trades/roofing-estimating">Division 07 — Roofing Takeoffs</Link></li>
+              <li><Link to="/trades/drywall-estimating">Division 09 — Drywall &amp; Finishes</Link></li>
+              <li><Link to="/trades/mep-estimating">Divisions 21–28 — MEP Estimating</Link></li>
+              <li><Link to="/trades/sitework-estimating">Divisions 31–33 — Sitework &amp; Civil</Link></li>
             </ul>
           </div>
 
@@ -78,6 +85,11 @@ export default function Footer() {
                 Monday – Friday: 9:00 AM – 5:00 PM EST
               </div>
             </div>
+            <div style={{ marginTop: '16px' }}>
+              <Link to="/contact" className="btn btn-red btn-sm" style={{ textDecoration: 'none', display: 'inline-block', width: '100%', textAlign: 'center' }}>
+                Submit Plans for Quote →
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -90,6 +102,8 @@ export default function Footer() {
             <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
               <Link to="/privacy-policy">Privacy Policy</Link>
               <Link to="/terms">Terms &amp; Bid Standards</Link>
+              <Link to="/blog">Knowledge Base</Link>
+              <Link to="/locations/new-york">NYC Office</Link>
             </div>
           </div>
         </div>

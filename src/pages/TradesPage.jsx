@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
+import AccuracyAuditMethodology from '../components/AccuracyAuditMethodology'
 
 export default function TradesPage() {
   const [selectedDivision, setSelectedDivision] = useState('all')
+
+  const pageTitle = 'Construction Trades Covered | US Estimates Pro'
+  const pageDesc = 'Certified takeoff services across CSI Divisions 02 to 33: concrete, steel, MEP, roofing, drywall, and sitework. Fast 24–48 hour turnaround nationwide.'
 
   const tradeDivisions = [
     {
@@ -10,6 +15,7 @@ export default function TradesPage() {
       division: 'Division 03',
       name: 'Concrete & Slabs',
       icon: '🧱',
+      dedicatedUrl: '/trades/concrete-estimating',
       units: ['CY (Cubic Yards)', 'SF (Square Feet)', 'LBS / TONS (Rebar)', 'SFCA (Formwork)'],
       description: 'Comprehensive quantity takeoffs for subgrade and superstructure cast-in-place concrete, post-tensioned decks, and precast assemblies.',
       items: [
@@ -26,6 +32,7 @@ export default function TradesPage() {
       division: 'Division 04',
       name: 'Masonry & Stone',
       icon: '🏗️',
+      dedicatedUrl: '/trades/masonry-estimating',
       units: ['EA (Block/Brick Count)', 'SF (Wall Surface Area)', 'CY (Grout Fill)', 'LF (Lintels)'],
       description: 'Complete unit count, mortar volume, bond beams, and reinforcing calculations for structural and architectural masonry.',
       items: [
@@ -42,6 +49,7 @@ export default function TradesPage() {
       division: 'Division 05',
       name: 'Structural Steel & Metals',
       icon: '⚙️',
+      dedicatedUrl: '/trades/structural-steel-estimating',
       units: ['TONS (Total Weight)', 'LBS (Weight)', 'LF (Linear Feet)', 'EA (Anchor Bolts)'],
       description: 'Fabrication and erection estimates covering heavy structural framing, steel joists, metal decking, and miscellaneous ornamental ironwork.',
       items: [
@@ -58,6 +66,7 @@ export default function TradesPage() {
       division: 'Division 06',
       name: 'Carpentry & Framing',
       icon: '🪚',
+      dedicatedUrl: '/trades/drywall-estimating',
       units: ['MBF (Thousand Board Feet)', 'SF (Sheathing)', 'LF (Plates/Studs)', 'EA (Trusses)'],
       description: 'Precise dimensional lumber, engineered wood products, timber framing, and architectural casework modeling.',
       items: [
@@ -74,6 +83,7 @@ export default function TradesPage() {
       division: 'Division 07',
       name: 'Thermal & Moisture Protection',
       icon: '🏠',
+      dedicatedUrl: '/trades/roofing-estimating',
       units: ['SQ (Roofing Squares = 100 SF)', 'SF (Surface Area)', 'LF (Flashing/Sealants)'],
       description: 'Full weatherization envelope estimates: commercial flat roofing, steep roofing, dampproofing, and insulation assemblies.',
       items: [
@@ -90,6 +100,7 @@ export default function TradesPage() {
       division: 'Division 08',
       name: 'Doors, Windows & Glazing',
       icon: '🚪',
+      dedicatedUrl: '/trades/drywall-estimating',
       units: ['EA (Door/Window Units)', 'SF (Storefront/Curtainwall)', 'SETS (Hardware Sets)'],
       description: 'Door and window schedule takeoffs cross-referenced with architectural floor plans, elevations, and hardware sets.',
       items: [
@@ -106,6 +117,7 @@ export default function TradesPage() {
       division: 'Division 09',
       name: 'Drywall, Ceilings & Finishes',
       icon: '🎨',
+      dedicatedUrl: '/trades/drywall-estimating',
       units: ['SF (Surface Area)', 'LF (Studs/Trim)', 'SY (Square Yards Flooring)'],
       description: 'High-speed, granular area takeoffs for commercial dry construction, acoustical ceilings, flooring, and coatings.',
       items: [
@@ -122,6 +134,7 @@ export default function TradesPage() {
       division: 'Divisions 21–28',
       name: 'Complete MEP Systems',
       icon: '⚡',
+      dedicatedUrl: '/trades/mep-estimating',
       units: ['LF (Piping/Conduit/Duct)', 'LBS (Sheet Metal)', 'EA (Fixtures/Equipment)'],
       description: 'Turnkey Mechanical, Electrical, Plumbing, and Fire Suppression takeoff models for specialized and General Contractors.',
       items: [
@@ -138,6 +151,7 @@ export default function TradesPage() {
       division: 'Divisions 31–33',
       name: 'Civil, Site Work & Utilities',
       icon: '🚜',
+      dedicatedUrl: '/trades/sitework-estimating',
       units: ['CY (Cut & Fill)', 'SF / SY (Paving)', 'LF (Trenching & Pipe Run)'],
       description: 'Earthwork volumes, sitework grading, paving, and underground wet/dry utility takeoffs from civil site plan sheets.',
       items: [
@@ -151,12 +165,18 @@ export default function TradesPage() {
     },
   ]
 
-  const filteredDivisions = selectedDivision === 'all' 
-    ? tradeDivisions 
+  const filteredDivisions = selectedDivision === 'all'
+    ? tradeDivisions
     : tradeDivisions.filter(t => t.id === selectedDivision)
 
   return (
     <div className="subpage-wrapper">
+      <SEO
+        title={pageTitle}
+        description={pageDesc}
+        canonicalPath="/trades"
+      />
+
       {/* Subpage Hero Banner */}
       <section className="subpage-hero">
         <div className="container">
@@ -190,47 +210,47 @@ export default function TradesPage() {
       <section className="section bg-light" style={{ paddingBottom: '30px' }}>
         <div className="container">
           <div className="trades-filter-bar">
-            <button 
+            <button
               className={`trade-filter-btn ${selectedDivision === 'all' ? 'active' : ''}`}
               onClick={() => setSelectedDivision('all')}
             >
               All Trades (Div 02–33)
             </button>
-            <button 
+            <button
               className={`trade-filter-btn ${selectedDivision === 'concrete' ? 'active' : ''}`}
               onClick={() => setSelectedDivision('concrete')}
             >
               Concrete (Div 03)
             </button>
-            <button 
+            <button
               className={`trade-filter-btn ${selectedDivision === 'masonry' ? 'active' : ''}`}
               onClick={() => setSelectedDivision('masonry')}
             >
               Masonry (Div 04)
             </button>
-            <button 
+            <button
               className={`trade-filter-btn ${selectedDivision === 'metals' ? 'active' : ''}`}
               onClick={() => setSelectedDivision('metals')}
             >
-              Metals & Steel (Div 05)
+              Metals &amp; Steel (Div 05)
             </button>
-            <button 
+            <button
               className={`trade-filter-btn ${selectedDivision === 'finishes' ? 'active' : ''}`}
               onClick={() => setSelectedDivision('finishes')}
             >
-              Drywall & Finishes (Div 09)
+              Drywall &amp; Finishes (Div 09)
             </button>
-            <button 
+            <button
               className={`trade-filter-btn ${selectedDivision === 'mep' ? 'active' : ''}`}
               onClick={() => setSelectedDivision('mep')}
             >
               MEP (Div 21–28)
             </button>
-            <button 
+            <button
               className={`trade-filter-btn ${selectedDivision === 'civil' ? 'active' : ''}`}
               onClick={() => setSelectedDivision('civil')}
             >
-              Civil & Earthwork (Div 31–33)
+              Civil &amp; Earthwork (Div 31–33)
             </button>
           </div>
         </div>
@@ -270,7 +290,16 @@ export default function TradesPage() {
                   </ul>
                 </div>
 
-                <div className="trade-card-footer">
+                <div className="trade-card-footer" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  {trade.dedicatedUrl && (
+                    <Link
+                      to={trade.dedicatedUrl}
+                      className="btn btn-navy btn-sm"
+                      style={{ width: '100%', textAlign: 'center', whiteSpace: 'normal', wordBreak: 'break-word', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                    >
+                      Explore {trade.name} →
+                    </Link>
+                  )}
                   <Link
                     to="/contact"
                     className="btn btn-red btn-sm"
@@ -285,13 +314,16 @@ export default function TradesPage() {
         </div>
       </section>
 
+      {/* Accuracy Verification Protocol */}
+      <AccuracyAuditMethodology />
+
       {/* Measurement Standards & Methodology */}
       <section className="section">
         <div className="container">
           <div className="text-center mb-50">
             <span className="section-tag">Industry Rigor</span>
             <h2 className="section-title">
-              Our Measurement <span className="text-red">Standards & Tolerances</span>
+              Our Measurement <span className="text-red">Standards &amp; Tolerances</span>
             </h2>
             <p className="section-desc">
               We abide strictly by the guidelines set forth by the American Society of Professional Estimators (ASPE) and the Construction Specifications Institute (CSI).
@@ -306,7 +338,7 @@ export default function TradesPage() {
             </div>
             <div className="methodology-card">
               <div className="methodology-icon">📊</div>
-              <h4>Wastage & Lap Factors</h4>
+              <h4>Wastage &amp; Lap Factors</h4>
               <p>We apply standardized material-specific laps and wastage: 5% for rebar splice overlaps, 7% for drywall cutting, 10% for commercial ceramic tile cuts.</p>
             </div>
             <div className="methodology-card">
@@ -316,7 +348,7 @@ export default function TradesPage() {
             </div>
             <div className="methodology-card">
               <div className="methodology-icon">⚡</div>
-              <h4>Addenda & RFI Support</h4>
+              <h4>Addenda &amp; RFI Support</h4>
               <p>If project engineers release addenda or change bulletins during bidding, we update your marked plans and quantity sheets promptly.</p>
             </div>
           </div>
@@ -345,4 +377,3 @@ export default function TradesPage() {
     </div>
   )
 }
-

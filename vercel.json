@@ -1,5 +1,18 @@
 {
   "framework": "vite",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "usestimatespro.com"
+        }
+      ],
+      "destination": "https://www.usestimatespro.com/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
@@ -7,4 +20,3 @@
     }
   ]
 }
-

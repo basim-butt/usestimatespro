@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
+import AccuracyAuditMethodology from '../components/AccuracyAuditMethodology'
 
 export default function ServicesPage() {
+  const pageTitle = 'Construction Estimating Services | US Estimates Pro'
+  const pageDesc = 'Certified construction estimating services: material takeoffs, RSMeans cost modeling, bid packages, and value engineering across all 50 US states.'
+
   const coreServices = [
     {
       id: 'takeoffs',
@@ -17,6 +22,8 @@ export default function ServicesPage() {
       ],
       turnaround: '24–48 Hours',
       deliverables: ['Excel Material Workbook', 'Color-Coded Marked Up PDFs', 'Summary Sheet'],
+      dedicatedUrl: '/services/quantity-takeoffs',
+      linkText: 'Explore Quantity Takeoffs →',
     },
     {
       id: 'rsmeans',
@@ -32,6 +39,8 @@ export default function ServicesPage() {
       ],
       turnaround: '24–48 Hours',
       deliverables: ['Regional Cost Model', 'Labor Burden Matrix', 'Equipment Schedule'],
+      dedicatedUrl: '/services/rsmeans-cost-estimating',
+      linkText: 'Explore RSMeans Cost Modeling →',
     },
     {
       id: 'bid-packages',
@@ -47,6 +56,8 @@ export default function ServicesPage() {
       ],
       turnaround: '48–72 Hours',
       deliverables: ['Bid Proposal Package', 'Clarifications Document', 'AIA-Ready Schedule'],
+      dedicatedUrl: '/services/bid-package-preparation',
+      linkText: 'Explore Bid Package Preparation →',
     },
     {
       id: 'value-engineering',
@@ -62,6 +73,8 @@ export default function ServicesPage() {
       ],
       turnaround: '48 Hours',
       deliverables: ['VE Comparison Table', 'Constructability Notes', 'Budget Savings Report'],
+      dedicatedUrl: '/services/value-engineering',
+      linkText: 'Explore Value Engineering →',
     },
     {
       id: 'single-trade',
@@ -77,6 +90,8 @@ export default function ServicesPage() {
       ],
       turnaround: '24 Hours',
       deliverables: ['Trade-Specific Excel', 'Subcontractor Bid Sheet', 'Annotated Plans'],
+      dedicatedUrl: '/trades',
+      linkText: 'Explore All Trade Divisions →',
     },
     {
       id: 'rush-delivery',
@@ -87,11 +102,13 @@ export default function ServicesPage() {
       highlights: [
         'Immediate project intake and drawing triage within 60 minutes of upload',
         'Parallel takeoff workflows across divisions by dedicated senior peer estimators',
-        'Continuous communication via email and direct portal tracking',
+        'Continuous communication via email and direct phone tracking',
         'Guaranteed delivery ahead of your formal submission cutoff',
       ],
       turnaround: 'Same-Day / 24 Hours',
       deliverables: ['Priority Delivery', 'Dual-Peer Review Audit', 'Full Bid File'],
+      dedicatedUrl: '/contact',
+      linkText: 'Request Rush Intake →',
     },
   ]
 
@@ -104,6 +121,12 @@ export default function ServicesPage() {
 
   return (
     <div className="subpage-wrapper">
+      <SEO
+        title={pageTitle}
+        description={pageDesc}
+        canonicalPath="/services"
+      />
+
       {/* Subpage Hero Banner */}
       <section className="subpage-hero">
         <div className="container">
@@ -165,7 +188,7 @@ export default function ServicesPage() {
 
                 <div className="service-detail-split">
                   <div className="service-detail-highlights">
-                    <h4 className="service-block-heading">Core Scope & Inclusions:</h4>
+                    <h4 className="service-block-heading">Core Scope &amp; Inclusions:</h4>
                     <ul className="service-bullet-list">
                       {service.highlights.map((h, i) => (
                         <li key={i}>{h}</li>
@@ -182,9 +205,23 @@ export default function ServicesPage() {
                         </span>
                       ))}
                     </div>
-                    <Link to="/contact" className="btn btn-outline-navy btn-sm" style={{ marginTop: '16px', display: 'inline-block' }}>
-                      Request Scope Quote →
-                    </Link>
+
+                    <div style={{ marginTop: '16px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                      <Link
+                        to={service.dedicatedUrl}
+                        className="btn btn-navy btn-sm"
+                        style={{ textDecoration: 'none', flex: 1, textAlign: 'center' }}
+                      >
+                        {service.linkText}
+                      </Link>
+                      <Link
+                        to="/contact"
+                        className="btn btn-red btn-sm"
+                        style={{ textDecoration: 'none', padding: '10px 16px' }}
+                      >
+                        Get Quote →
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -192,6 +229,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* Accuracy Verification Protocol */}
+      <AccuracyAuditMethodology />
 
       {/* Deliverable Specifications Table */}
       <section className="section">
@@ -253,4 +293,3 @@ export default function ServicesPage() {
     </div>
   )
 }
-
