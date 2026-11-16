@@ -271,7 +271,11 @@ export default function TradesPage() {
                 </div>
 
                 <div className="trade-card-footer">
-                  <Link to="/contact" className="btn btn-red btn-sm" style={{ width: '100%', textAlign: 'center' }}>
+                  <Link
+                    to="/contact"
+                    className="btn btn-red btn-sm"
+                    style={{ width: '100%', textAlign: 'center', whiteSpace: 'normal', wordBreak: 'break-word', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                  >
                     Request Quote for {trade.name} →
                   </Link>
                 </div>
