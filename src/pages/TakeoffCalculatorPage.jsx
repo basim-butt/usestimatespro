@@ -92,23 +92,29 @@ export default function TakeoffCalculatorPage() {
           <div className="calculator-widget-box">
             <div className="calc-controls-grid">
               <div className="calc-input-group">
-                <label>Total Gross Floor Area (SF):</label>
+                <label htmlFor="calc-floor-area">Total Gross Floor Area (SF):</label>
                 <input 
+                  id="calc-floor-area"
+                  name="floorArea"
                   type="number" 
                   value={projectSqFt}
                   onChange={(e) => setProjectSqFt(e.target.value)}
                   className="calc-input"
                   min="500"
                   step="500"
+                  aria-label="Total Gross Floor Area in Square Feet"
                 />
               </div>
 
               <div className="calc-input-group">
-                <label>Facility / Building Type:</label>
+                <label htmlFor="calc-facility-type">Facility / Building Type:</label>
                 <select 
+                  id="calc-facility-type"
+                  name="facilityType"
                   value={buildingType} 
                   onChange={(e) => setBuildingType(e.target.value)}
                   className="calc-input"
+                  aria-label="Select Facility or Building Type"
                 >
                   <option value="residential">Single & Multi-Family Residential</option>
                   <option value="commercial">Commercial / Retail Office</option>
@@ -118,11 +124,14 @@ export default function TakeoffCalculatorPage() {
               </div>
 
               <div className="calc-input-group">
-                <label>Project Geographic Region:</label>
+                <label htmlFor="calc-geo-region">Project Geographic Region:</label>
                 <select 
+                  id="calc-geo-region"
+                  name="geoRegion"
                   value={region} 
                   onChange={(e) => setRegion(e.target.value)}
                   className="calc-input"
+                  aria-label="Select Project Geographic Region"
                 >
                   <option value="northeast">Northeast / Mid-Atlantic (Index: 1.24x)</option>
                   <option value="west">West Coast (Index: 1.21x)</option>

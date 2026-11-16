@@ -150,6 +150,7 @@ export default function Navbar() {
               className="logo-clickable"
               style={{ display: 'inline-block', textDecoration: 'none' }}
               onClick={() => setMobileOpen(false)}
+              aria-label="US Estimates Pro - Home"
             >
               <BrandLogo />
             </Link>
@@ -183,6 +184,8 @@ export default function Navbar() {
                 className="mobile-toggle"
                 onClick={() => setMobileOpen(!mobileOpen)}
                 aria-label="Toggle navigation"
+                aria-expanded={mobileOpen}
+                aria-controls="mobile-nav-drawer"
               >
                 <span />
                 <span />
@@ -197,7 +200,11 @@ export default function Navbar() {
       <div className="header-stripes-modern" />
 
       {/* Mobile Menu */}
-      <div className={`mobile-drawer ${mobileOpen ? 'open' : ''}`}>
+      <div
+        id="mobile-nav-drawer"
+        className={`mobile-drawer ${mobileOpen ? 'open' : ''}`}
+        aria-hidden={!mobileOpen}
+      >
         <ul>
           {navItems.map((item) => (
             <li key={item.label}>

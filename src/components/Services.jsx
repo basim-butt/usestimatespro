@@ -101,6 +101,7 @@ export default function Services() {
                 className="service-link"
                 style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
                 onClick={() => scrollTo('quote')}
+                aria-label={`Request quote for ${s.title}`}
               >
                 Request Quote For This Trade →
               </button>

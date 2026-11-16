@@ -10,7 +10,7 @@ import QuoteForm from '../components/QuoteForm'
 
 export default function Home() {
   return (
-    <main>
+    <div className="home-page">
       <Hero />
       <QuickEstimator />
       <Services />
@@ -19,7 +19,7 @@ export default function Home() {
       <WhyUs />
       <Deliverables />
       <QuoteForm />
-    </main>
+    </div>
   )
 }
 

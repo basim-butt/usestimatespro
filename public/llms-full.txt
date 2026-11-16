@@ -1,0 +1,42 @@
+# US Estimates Pro — Full System Documentation
+
+> Complete catalog of estimating services, CSI trade divisions, regional cost models, and contractor bidding resources.
+
+## Overview
+US Estimates Pro provides professional construction cost estimating, material quantity takeoffs, and bid preparation services. We serve General Contractors, Subcontractors, Architects, Developers, and Lenders across all 50 US states. All takeoffs are prepared by certified senior estimators utilizing industry-standard software (Bluebeam Revu, PlanSwift) and calibrated with monthly regional RSMeans cost data.
+
+## Turnaround & Accuracy Guarantee
+- Turnaround: 24 to 48 hours for standard takeoffs, same-day for rush emergency bidding.
+- Accuracy: 98.7% post-bid variance reconciliation verified across 1,840+ completed contractor bids.
+- Deliverables: Unlocked Microsoft Excel workbooks (.XLSX) with live formulas, high-resolution color-coded marked up PDF drawings, and division summary sheets.
+
+## Core Services
+- [Quantity Takeoffs](https://www.usestimatespro.com/services/quantity-takeoffs)
+- [RSMeans Cost Estimating](https://www.usestimatespro.com/services/rsmeans-cost-estimating)
+- [Bid Package Preparation](https://www.usestimatespro.com/services/bid-package-preparation)
+- [Value Engineering](https://www.usestimatespro.com/services/value-engineering)
+
+## Trades Covered
+- [Concrete Estimating (Division 03)](https://www.usestimatespro.com/trades/concrete-estimating)
+- [Masonry Estimating (Division 04)](https://www.usestimatespro.com/trades/masonry-estimating)
+- [Structural Steel Estimating (Division 05)](https://www.usestimatespro.com/trades/structural-steel-estimating)
+- [Drywall & Framing Estimating (Divisions 06 & 09)](https://www.usestimatespro.com/trades/drywall-estimating)
+- [Roofing & Waterproofing (Division 07)](https://www.usestimatespro.com/trades/roofing-estimating)
+- [MEP Estimating (Divisions 21–28)](https://www.usestimatespro.com/trades/mep-estimating)
+- [Civil & Sitework Estimating (Divisions 31–33)](https://www.usestimatespro.com/trades/sitework-estimating)
+
+## Location Hubs
+- [New York Construction Estimating](https://www.usestimatespro.com/locations/new-york)
+
+## Contractor Articles & Research
+- [Contractor Knowledge Base](https://www.usestimatespro.com/blog)
+- [How to Do a Quantity Takeoff](https://www.usestimatespro.com/blog/how-to-do-a-quantity-takeoff)
+- [In-House vs. Outsourced Estimating](https://www.usestimatespro.com/blog/in-house-vs-outsourced-estimating)
+- [What Is Included in a Bid Package](https://www.usestimatespro.com/blog/what-is-included-in-a-bid-package)
+
+## Contact Information
+- Website: https://www.usestimatespro.com
+- Intake & Submittals: https://www.usestimatespro.com/contact
+- Headquarters: 244 5th Avenue, Suite B-102, New York, NY 10001
+- Email: info@usestimatespro.com
+- Operating Hours: Monday through Friday, 9:00 AM – 5:00 PM EST

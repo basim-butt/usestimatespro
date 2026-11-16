@@ -141,25 +141,31 @@ export default function QuoteForm() {
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} aria-label="Construction Takeoff Quote Request">
                 <div className="form-grid-2">
                   <div className="form-group">
-                    <label className="form-label">Full Name *</label>
+                    <label htmlFor="quote-fullname" className="form-label">Full Name *</label>
                     <input
+                      id="quote-fullname"
+                      name="fullName"
                       type="text"
                       className="form-control"
                       placeholder="e.g. John Miller"
                       required
+                      autoComplete="name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
                   </div>
                   <div className="form-group">
-                    <label className="form-label">Company / Contractor Name</label>
+                    <label htmlFor="quote-company" className="form-label">Company / Contractor Name</label>
                     <input
+                      id="quote-company"
+                      name="company"
                       type="text"
                       className="form-control"
                       placeholder="e.g. Miller Builders LLC"
+                      autoComplete="organization"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     />
@@ -167,12 +173,15 @@ export default function QuoteForm() {
                 </div>
 
                 <div className="form-group">
-                  <label className="form-label">Work Email *</label>
+                  <label htmlFor="quote-email" className="form-label">Work Email *</label>
                   <input
+                    id="quote-email"
+                    name="email"
                     type="email"
                     className="form-control"
                     placeholder="john@company.com"
                     required
+                    autoComplete="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   />
@@ -180,8 +189,10 @@ export default function QuoteForm() {
 
                 <div className="form-grid-2">
                   <div className="form-group">
-                    <label className="form-label">Project State *</label>
+                    <label htmlFor="quote-state" className="form-label">Project State *</label>
                     <select
+                      id="quote-state"
+                      name="state"
                       className="form-control"
                       required
                       value={formData.state}
@@ -197,8 +208,10 @@ export default function QuoteForm() {
                   </div>
 
                   <div className="form-group">
-                    <label className="form-label">Trade / Scope Needed *</label>
+                    <label htmlFor="quote-scope" className="form-label">Trade / Scope Needed *</label>
                     <select
+                      id="quote-scope"
+                      name="scope"
                       className="form-control"
                       value={formData.scope}
                       onChange={(e) => setFormData({ ...formData, scope: e.target.value })}
@@ -220,10 +233,16 @@ export default function QuoteForm() {
 
                 {/* Upload or Link Area */}
                 <div className="form-group">
-                  <label className="form-label">Upload Plans or Drawings (PDF, ZIP, DWG)</label>
+                  <label htmlFor="quote-file" className="form-label">Upload Plans or Drawings (PDF, ZIP, DWG)</label>
                   <div className="file-drop-area">
-                    <input type="file" onChange={handleFileChange} />
-                    <div className="file-drop-icon">📁</div>
+                    <input
+                      id="quote-file"
+                      name="file"
+                      type="file"
+                      aria-label="Upload drawing plans or specifications (PDF, ZIP, DWG)"
+                      onChange={handleFileChange}
+                    />
+                    <div className="file-drop-icon" aria-hidden="true">📁</div>
                     <div className="file-drop-text">
                       {fileName ? (
                         <strong style={{ color: '#16a34a' }}>Selected: {fileName}</strong>
@@ -238,9 +257,13 @@ export default function QuoteForm() {
                 </div>
 
                 <div className="form-group">
+                  <label htmlFor="quote-notes" className="form-label" style={{ fontSize: '0.85rem' }}>Plan Download Link or Project Notes</label>
                   <input
+                    id="quote-notes"
+                    name="notes"
                     type="text"
                     className="form-control"
+                    aria-label="Optional: Paste plan link (Dropbox, Google Drive, Procore) or scope notes"
                     placeholder="Optional: Paste plan link (Dropbox, Google Drive, Procore) or notes..."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
@@ -252,6 +275,7 @@ export default function QuoteForm() {
                   className="btn btn-red"
                   style={{ width: '100%', padding: '14px', fontSize: '1rem' }}
                   disabled={loading}
+                  aria-label="Submit construction plans for free takeoff quote"
                 >
                   {loading ? 'Reviewing Your Request…' : 'Submit Plans For Free Quote →'}
                 </button>

@@ -31,7 +31,7 @@ export default function Hero() {
   return (
     <section className="hero-video-section" id="hero">
       {/* Background Video */}
-      <div className="video-background-wrapper">
+      <div className="video-background-wrapper" aria-hidden="true">
         <video
           ref={videoRef}
           className="hero-video"
@@ -41,6 +41,8 @@ export default function Hero() {
           playsInline
           webkit-playsinline="true"
           preload="auto"
+          aria-hidden="true"
+          tabIndex="-1"
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>

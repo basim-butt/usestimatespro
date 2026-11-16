@@ -45,9 +45,11 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <div className="site-wrapper">
+        <a href="#main-content" className="sr-only-focusable">Skip to main content</a>
         <Navbar />
-        <Routes>
-          {/* Main Hub Routes */}
+        <main id="main-content" tabIndex="-1">
+          <Routes>
+            {/* Main Hub Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/trades" element={<TradesPage />} />
@@ -85,6 +87,7 @@ export default function App() {
 
           <Route path="*" element={<Home />} />
         </Routes>
+        </main>
         <Footer />
         <BackToTop />
       </div>

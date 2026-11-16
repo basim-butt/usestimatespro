@@ -2,4 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.usestimatespro.com/sitemap.xml
+Agentmap: https://www.usestimatespro.com/.well-known/ard.json
+Agentmap: https://www.usestimatespro.com/ard.json
 

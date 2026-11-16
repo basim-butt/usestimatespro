@@ -76,6 +76,7 @@ export default function Trades() {
               <button
                 className="pillar-action-link"
                 onClick={scrollToQuote}
+                aria-label={`Request estimate for ${p.title}`}
               >
                 Estimate This Scope →
               </button>

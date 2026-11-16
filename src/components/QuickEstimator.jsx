@@ -23,6 +23,9 @@ export default function QuickEstimator() {
 
           <div className="tool-bar-inputs">
             <select
+              id="quick-building-type"
+              name="buildingType"
+              aria-label="Select Project Building Type"
               className="tool-select"
               value={type}
               onChange={(e) => setType(e.target.value)}
@@ -35,6 +38,9 @@ export default function QuickEstimator() {
             </select>
 
             <select
+              id="quick-trade-scope"
+              name="tradeScope"
+              aria-label="Select CSI Trade Division Scope"
               className="tool-select"
               value={trade}
               onChange={(e) => setTrade(e.target.value)}
@@ -48,7 +54,11 @@ export default function QuickEstimator() {
               <option value="thermal">Div 07 — Roofing & Waterproofing</option>
             </select>
 
-            <button className="btn btn-red" onClick={scrollToQuote}>
+            <button
+              className="btn btn-red"
+              onClick={scrollToQuote}
+              aria-label="Get a custom takeoff quote"
+            >
               Get a Quote →
             </button>
           </div>

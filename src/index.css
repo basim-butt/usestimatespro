@@ -3475,3 +3475,23 @@ button {
     padding: 18px 12px !important;
   }
 }
+
+/* Accessibility: Skip to Content */
+.sr-only-focusable {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  background: var(--navy-darkest);
+  color: #ffffff;
+  padding: 12px 18px;
+  z-index: 10000;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+}
+
+.sr-only-focusable:focus {
+  top: 12px;
+  left: 12px;
+}

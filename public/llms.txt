@@ -1,0 +1,34 @@
+# US Estimates Pro
+
+> Professional construction cost estimating, material takeoffs, and bid preparation services for General Contractors, Subcontractors, and Developers across all 50 US states.
+
+US Estimates Pro is an independent American construction cost estimation consultancy. Our certified senior estimators deliver comprehensive CSI MasterFormat quantity takeoffs, localized RSMeans cost models, and turnkey bid proposal packages within 24 to 48 hours with 98.7% verified bid accuracy.
+
+## Core Estimating Services
+- [Quantity Takeoffs](https://www.usestimatespro.com/services/quantity-takeoffs): Precision material and labor takeoffs with color-coded Bluebeam PDF markups and unlocked Excel workbooks.
+- [RSMeans Cost Estimating](https://www.usestimatespro.com/services/rsmeans-cost-estimating): Hyper-localized pricing adjusted to project zip codes using current RSMeans City Cost Indexes.
+- [Bid Package Preparation](https://www.usestimatespro.com/services/bid-package-preparation): Turnkey proposal submittals formatted for owners, general contractors, and public agencies.
+- [Value Engineering](https://www.usestimatespro.com/services/value-engineering): Constructability reviews and strategic material substitution models to restore tight budgets.
+
+## CSI MasterFormat Trade Divisions
+- [Concrete Estimating](https://www.usestimatespro.com/trades/concrete-estimating): CSI Division 03 — footings, slabs, rebar schedules (#3–#11), formwork SFCA, and pumping allowances.
+- [Masonry Estimating](https://www.usestimatespro.com/trades/masonry-estimating): CSI Division 04 — CMU block counts, architectural brick, mortar volumes, and bond beams.
+- [Structural Steel Estimating](https://www.usestimatespro.com/trades/structural-steel-estimating): CSI Division 05 — structural steel framing, joists, metal decking, and miscellaneous ironwork.
+- [Drywall & Framing Estimating](https://www.usestimatespro.com/trades/drywall-estimating): CSI Divisions 06 & 09 — light-gauge metal studs, wood framing, gypsum board, and acoustical ceilings.
+- [Roofing & Waterproofing](https://www.usestimatespro.com/trades/roofing-estimating): CSI Division 07 — commercial flat roofing (TPO, EPDM, PVC), architectural shingles, and building envelope waterproofing.
+- [MEP Estimating](https://www.usestimatespro.com/trades/mep-estimating): CSI Divisions 21–28 — mechanical HVAC ductwork, plumbing piping, electrical switchgear/branch circuits, and fire suppression.
+- [Civil & Sitework Estimating](https://www.usestimatespro.com/trades/sitework-estimating): CSI Divisions 31–33 — earthwork cut/fill balances, asphalt paving, and underground utilities.
+
+## Regional Hubs
+- [New York Construction Estimating](https://www.usestimatespro.com/locations/new-york): Localized NYC DOB code compliance, Comptroller prevailing wage rates, and 5-borough staging logistics.
+
+## Contractor Knowledge Base & Guides
+- [Estimating Knowledge Base](https://www.usestimatespro.com/blog): Actionable articles and industry benchmarks authored by senior estimators.
+- [How to Do a Quantity Takeoff](https://www.usestimatespro.com/blog/how-to-do-a-quantity-takeoff): Step-by-step contractor guide to digital drawing calibration and CSI takeoffs.
+- [In-House vs. Outsourced Estimating](https://www.usestimatespro.com/blog/in-house-vs-outsourced-estimating): Comprehensive cost and risk analysis for commercial contractors.
+- [What Is Included in a Bid Package](https://www.usestimatespro.com/blog/what-is-included-in-a-bid-package): The essential components of a winning commercial construction proposal.
+
+## Intake & Contact
+- [Request a Guaranteed Quote](https://www.usestimatespro.com/contact): Submit drawing sets (PDF, DWG, ZIP) for guaranteed turnaround pricing in 1–2 hours.
+- [All Covered Trades](https://www.usestimatespro.com/trades): Overview of CSI Divisions 02 through 33.
+- [Company Profile & Methodology](https://www.usestimatespro.com/why-us): Details on certified estimators, dual-peer review quality control, and the 98.7% accuracy audit protocol.
