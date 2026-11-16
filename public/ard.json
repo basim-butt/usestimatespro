@@ -1,3 +1,23 @@
 {
-  "entries": []
+  "version": "1.0",
+  "entries": [
+    {
+      "type": "service",
+      "name": "US Estimates Pro — Construction Cost Estimating",
+      "description": "Certified construction cost estimation and quantity takeoff services. CSI MasterFormat, RSMeans 50-state pricing, 24-48 hour delivery, 98.7% accuracy.",
+      "url": "https://www.usestimatespro.com/",
+      "contact": "info@usestimatespro.com",
+      "capabilities": [
+        "quantity-takeoffs",
+        "cost-estimating",
+        "bid-package-preparation",
+        "value-engineering",
+        "mep-estimating",
+        "structural-steel-estimating",
+        "concrete-estimating",
+        "roofing-estimating",
+        "sitework-estimating"
+      ]
+    }
+  ]
 }

@@ -123,8 +123,8 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--red-light);
-  color: #991b1b;
+  background: #fee2e2 !important;
+  color: #991b1b !important;
   font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 700;
