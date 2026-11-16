@@ -124,7 +124,7 @@ button {
   align-items: center;
   gap: 8px;
   background: var(--red-light);
-  color: var(--red);
+  color: #991b1b;
   font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 700;
@@ -133,7 +133,7 @@ button {
   padding: 5px 14px;
   border-radius: var(--radius-sm);
   margin-bottom: 14px;
-  border-left: 3px solid var(--red);
+  border-left: 3px solid #b91c1c;
 }
 
 .section-tag.navy {

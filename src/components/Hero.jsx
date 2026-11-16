@@ -40,7 +40,7 @@ export default function Hero() {
           loop
           playsInline
           webkit-playsinline="true"
-          preload="auto"
+          preload="none"
           aria-hidden="true"
           tabIndex="-1"
         >
